@@ -9,3 +9,5 @@ C:\Users\aluno2\Downloads\ProjetoContas\ProjetoContas\obj\Debug\ProjetoContas.cs
 C:\Users\aluno2\Downloads\ProjetoContas\ProjetoContas\obj\Debug\ProjetoContas.csproj.CoreCompileInputs.cache
 C:\Users\aluno2\Downloads\ProjetoContas\ProjetoContas\obj\Debug\ProjetoContas.exe
 C:\Users\aluno2\Downloads\ProjetoContas\ProjetoContas\obj\Debug\ProjetoContas.pdb
+C:\Users\aluno2\Downloads\ProjetoContas\ProjetoContas\bin\Debug\contas.mdf
+C:\Users\aluno2\Downloads\ProjetoContas\ProjetoContas\bin\Debug\contas_log.ldf
