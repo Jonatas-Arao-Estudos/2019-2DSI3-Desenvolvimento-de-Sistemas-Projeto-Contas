@@ -16,5 +16,11 @@ namespace ProjetoContas
         {
             InitializeComponent();
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuario fu = new frmUsuario();
+            fu.Show();
+        }
     }
 }
