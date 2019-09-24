@@ -101,6 +101,7 @@ namespace ProjetoContas
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            tbUsuarioBindingSource.CancelEdit();
             Desabilita();
         }
 
@@ -108,6 +109,7 @@ namespace ProjetoContas
         {
             if(tbUsuarioBindingSource.Count > 0)
             {
+                tbUsuarioBindingSource.RemoveCurrent();
                 tbUsuarioTableAdapter.Update(contasDataSet.tbUsuario);
             }
             else
