@@ -117,5 +117,10 @@ namespace ProjetoContas
                 MessageBox.Show("Não há registros a excluir!");
             }
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -62,6 +62,56 @@
             ((System.ComponentModel.ISupportInitialize)(this.contasDataSet)).BeginInit();
             this.SuspendLayout();
             // 
+            // cd_usuarioLabel
+            // 
+            cd_usuarioLabel.AutoSize = true;
+            cd_usuarioLabel.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cd_usuarioLabel.Location = new System.Drawing.Point(67, 56);
+            cd_usuarioLabel.Name = "cd_usuarioLabel";
+            cd_usuarioLabel.Size = new System.Drawing.Size(91, 29);
+            cd_usuarioLabel.TabIndex = 10;
+            cd_usuarioLabel.Text = "Código:";
+            // 
+            // nm_usuarioLabel
+            // 
+            nm_usuarioLabel.AutoSize = true;
+            nm_usuarioLabel.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nm_usuarioLabel.Location = new System.Drawing.Point(77, 99);
+            nm_usuarioLabel.Name = "nm_usuarioLabel";
+            nm_usuarioLabel.Size = new System.Drawing.Size(81, 29);
+            nm_usuarioLabel.TabIndex = 12;
+            nm_usuarioLabel.Text = "Nome:";
+            // 
+            // sg_nivelLabel
+            // 
+            sg_nivelLabel.AutoSize = true;
+            sg_nivelLabel.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            sg_nivelLabel.Location = new System.Drawing.Point(87, 142);
+            sg_nivelLabel.Name = "sg_nivelLabel";
+            sg_nivelLabel.Size = new System.Drawing.Size(71, 29);
+            sg_nivelLabel.TabIndex = 14;
+            sg_nivelLabel.Text = "Nível:";
+            // 
+            // nm_loginLabel
+            // 
+            nm_loginLabel.AutoSize = true;
+            nm_loginLabel.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nm_loginLabel.Location = new System.Drawing.Point(81, 185);
+            nm_loginLabel.Name = "nm_loginLabel";
+            nm_loginLabel.Size = new System.Drawing.Size(77, 29);
+            nm_loginLabel.TabIndex = 16;
+            nm_loginLabel.Text = "Login:";
+            // 
+            // ds_senhaLabel
+            // 
+            ds_senhaLabel.AutoSize = true;
+            ds_senhaLabel.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            ds_senhaLabel.Location = new System.Drawing.Point(76, 228);
+            ds_senhaLabel.Name = "ds_senhaLabel";
+            ds_senhaLabel.Size = new System.Drawing.Size(82, 29);
+            ds_senhaLabel.TabIndex = 18;
+            ds_senhaLabel.Text = "Senha:";
+            // 
             // btnAnterior
             // 
             this.btnAnterior.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -125,6 +175,7 @@
             this.btnSair.TabIndex = 5;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnNovo
             // 
@@ -169,16 +220,6 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // cd_usuarioLabel
-            // 
-            cd_usuarioLabel.AutoSize = true;
-            cd_usuarioLabel.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cd_usuarioLabel.Location = new System.Drawing.Point(67, 56);
-            cd_usuarioLabel.Name = "cd_usuarioLabel";
-            cd_usuarioLabel.Size = new System.Drawing.Size(91, 29);
-            cd_usuarioLabel.TabIndex = 10;
-            cd_usuarioLabel.Text = "Código:";
-            // 
             // cd_usuarioTextBox
             // 
             this.cd_usuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbUsuarioBindingSource, "cd_usuario", true));
@@ -187,16 +228,6 @@
             this.cd_usuarioTextBox.Name = "cd_usuarioTextBox";
             this.cd_usuarioTextBox.Size = new System.Drawing.Size(63, 37);
             this.cd_usuarioTextBox.TabIndex = 11;
-            // 
-            // nm_usuarioLabel
-            // 
-            nm_usuarioLabel.AutoSize = true;
-            nm_usuarioLabel.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nm_usuarioLabel.Location = new System.Drawing.Point(77, 99);
-            nm_usuarioLabel.Name = "nm_usuarioLabel";
-            nm_usuarioLabel.Size = new System.Drawing.Size(81, 29);
-            nm_usuarioLabel.TabIndex = 12;
-            nm_usuarioLabel.Text = "Nome:";
             // 
             // nm_usuarioTextBox
             // 
@@ -207,16 +238,6 @@
             this.nm_usuarioTextBox.Size = new System.Drawing.Size(372, 37);
             this.nm_usuarioTextBox.TabIndex = 13;
             // 
-            // sg_nivelLabel
-            // 
-            sg_nivelLabel.AutoSize = true;
-            sg_nivelLabel.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sg_nivelLabel.Location = new System.Drawing.Point(87, 142);
-            sg_nivelLabel.Name = "sg_nivelLabel";
-            sg_nivelLabel.Size = new System.Drawing.Size(71, 29);
-            sg_nivelLabel.TabIndex = 14;
-            sg_nivelLabel.Text = "Nível:";
-            // 
             // sg_nivelTextBox
             // 
             this.sg_nivelTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbUsuarioBindingSource, "sg_nivel", true));
@@ -226,16 +247,6 @@
             this.sg_nivelTextBox.Size = new System.Drawing.Size(63, 37);
             this.sg_nivelTextBox.TabIndex = 15;
             // 
-            // nm_loginLabel
-            // 
-            nm_loginLabel.AutoSize = true;
-            nm_loginLabel.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nm_loginLabel.Location = new System.Drawing.Point(81, 185);
-            nm_loginLabel.Name = "nm_loginLabel";
-            nm_loginLabel.Size = new System.Drawing.Size(77, 29);
-            nm_loginLabel.TabIndex = 16;
-            nm_loginLabel.Text = "Login:";
-            // 
             // nm_loginTextBox
             // 
             this.nm_loginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbUsuarioBindingSource, "nm_login", true));
@@ -244,16 +255,6 @@
             this.nm_loginTextBox.Name = "nm_loginTextBox";
             this.nm_loginTextBox.Size = new System.Drawing.Size(258, 37);
             this.nm_loginTextBox.TabIndex = 17;
-            // 
-            // ds_senhaLabel
-            // 
-            ds_senhaLabel.AutoSize = true;
-            ds_senhaLabel.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ds_senhaLabel.Location = new System.Drawing.Point(76, 228);
-            ds_senhaLabel.Name = "ds_senhaLabel";
-            ds_senhaLabel.Size = new System.Drawing.Size(82, 29);
-            ds_senhaLabel.TabIndex = 18;
-            ds_senhaLabel.Text = "Senha:";
             // 
             // ds_senhaTextBox
             // 
