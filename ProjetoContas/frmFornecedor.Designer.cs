@@ -74,6 +74,87 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbFornecedorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // cd_fornecedorLabel
+            // 
+            cd_fornecedorLabel.AutoSize = true;
+            cd_fornecedorLabel.Location = new System.Drawing.Point(51, 38);
+            cd_fornecedorLabel.Name = "cd_fornecedorLabel";
+            cd_fornecedorLabel.Size = new System.Drawing.Size(91, 29);
+            cd_fornecedorLabel.TabIndex = 1;
+            cd_fornecedorLabel.Text = "Código:";
+            // 
+            // nm_fornecedorLabel
+            // 
+            nm_fornecedorLabel.AutoSize = true;
+            nm_fornecedorLabel.Location = new System.Drawing.Point(61, 81);
+            nm_fornecedorLabel.Name = "nm_fornecedorLabel";
+            nm_fornecedorLabel.Size = new System.Drawing.Size(81, 29);
+            nm_fornecedorLabel.TabIndex = 3;
+            nm_fornecedorLabel.Text = "Nome:";
+            // 
+            // ds_enderecoLabel
+            // 
+            ds_enderecoLabel.AutoSize = true;
+            ds_enderecoLabel.Location = new System.Drawing.Point(28, 124);
+            ds_enderecoLabel.Name = "ds_enderecoLabel";
+            ds_enderecoLabel.Size = new System.Drawing.Size(114, 29);
+            ds_enderecoLabel.TabIndex = 5;
+            ds_enderecoLabel.Text = "Endereço:";
+            // 
+            // nm_cidadeLabel
+            // 
+            nm_cidadeLabel.AutoSize = true;
+            nm_cidadeLabel.Location = new System.Drawing.Point(51, 167);
+            nm_cidadeLabel.Name = "nm_cidadeLabel";
+            nm_cidadeLabel.Size = new System.Drawing.Size(89, 29);
+            nm_cidadeLabel.TabIndex = 7;
+            nm_cidadeLabel.Text = "Cidade:";
+            // 
+            // nm_bairroLabel
+            // 
+            nm_bairroLabel.AutoSize = true;
+            nm_bairroLabel.Location = new System.Drawing.Point(60, 208);
+            nm_bairroLabel.Name = "nm_bairroLabel";
+            nm_bairroLabel.Size = new System.Drawing.Size(80, 29);
+            nm_bairroLabel.TabIndex = 9;
+            nm_bairroLabel.Text = "Bairro:";
+            // 
+            // sg_estadoLabel
+            // 
+            sg_estadoLabel.AutoSize = true;
+            sg_estadoLabel.Location = new System.Drawing.Point(407, 167);
+            sg_estadoLabel.Name = "sg_estadoLabel";
+            sg_estadoLabel.Size = new System.Drawing.Size(88, 29);
+            sg_estadoLabel.TabIndex = 11;
+            sg_estadoLabel.Text = "Estado:";
+            // 
+            // cd_cepLabel
+            // 
+            cd_cepLabel.AutoSize = true;
+            cd_cepLabel.Location = new System.Drawing.Point(338, 211);
+            cd_cepLabel.Name = "cd_cepLabel";
+            cd_cepLabel.Size = new System.Drawing.Size(60, 29);
+            cd_cepLabel.TabIndex = 13;
+            cd_cepLabel.Text = "CEP:";
+            // 
+            // ds_telefoneLabel
+            // 
+            ds_telefoneLabel.AutoSize = true;
+            ds_telefoneLabel.Location = new System.Drawing.Point(34, 254);
+            ds_telefoneLabel.Name = "ds_telefoneLabel";
+            ds_telefoneLabel.Size = new System.Drawing.Size(106, 29);
+            ds_telefoneLabel.TabIndex = 15;
+            ds_telefoneLabel.Text = "Telefone:";
+            // 
+            // ds_emailLabel
+            // 
+            ds_emailLabel.AutoSize = true;
+            ds_emailLabel.Location = new System.Drawing.Point(56, 297);
+            ds_emailLabel.Name = "ds_emailLabel";
+            ds_emailLabel.Size = new System.Drawing.Size(84, 29);
+            ds_emailLabel.TabIndex = 17;
+            ds_emailLabel.Text = "E-mail:";
+            // 
             // contasDataSet
             // 
             this.contasDataSet.DataSetName = "contasDataSet";
@@ -98,15 +179,6 @@
             this.tableAdapterManager.tbUsuarioTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = ProjetoContas.contasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // cd_fornecedorLabel
-            // 
-            cd_fornecedorLabel.AutoSize = true;
-            cd_fornecedorLabel.Location = new System.Drawing.Point(51, 38);
-            cd_fornecedorLabel.Name = "cd_fornecedorLabel";
-            cd_fornecedorLabel.Size = new System.Drawing.Size(91, 29);
-            cd_fornecedorLabel.TabIndex = 1;
-            cd_fornecedorLabel.Text = "Código:";
-            // 
             // cd_fornecedorTextBox
             // 
             this.cd_fornecedorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbFornecedorBindingSource, "cd_fornecedor", true));
@@ -114,15 +186,6 @@
             this.cd_fornecedorTextBox.Name = "cd_fornecedorTextBox";
             this.cd_fornecedorTextBox.Size = new System.Drawing.Size(63, 37);
             this.cd_fornecedorTextBox.TabIndex = 2;
-            // 
-            // nm_fornecedorLabel
-            // 
-            nm_fornecedorLabel.AutoSize = true;
-            nm_fornecedorLabel.Location = new System.Drawing.Point(61, 81);
-            nm_fornecedorLabel.Name = "nm_fornecedorLabel";
-            nm_fornecedorLabel.Size = new System.Drawing.Size(81, 29);
-            nm_fornecedorLabel.TabIndex = 3;
-            nm_fornecedorLabel.Text = "Nome:";
             // 
             // nm_fornecedorTextBox
             // 
@@ -132,15 +195,6 @@
             this.nm_fornecedorTextBox.Size = new System.Drawing.Size(432, 37);
             this.nm_fornecedorTextBox.TabIndex = 4;
             // 
-            // ds_enderecoLabel
-            // 
-            ds_enderecoLabel.AutoSize = true;
-            ds_enderecoLabel.Location = new System.Drawing.Point(28, 124);
-            ds_enderecoLabel.Name = "ds_enderecoLabel";
-            ds_enderecoLabel.Size = new System.Drawing.Size(114, 29);
-            ds_enderecoLabel.TabIndex = 5;
-            ds_enderecoLabel.Text = "Endereço:";
-            // 
             // ds_enderecoTextBox
             // 
             this.ds_enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbFornecedorBindingSource, "ds_endereco", true));
@@ -148,15 +202,6 @@
             this.ds_enderecoTextBox.Name = "ds_enderecoTextBox";
             this.ds_enderecoTextBox.Size = new System.Drawing.Size(431, 37);
             this.ds_enderecoTextBox.TabIndex = 6;
-            // 
-            // nm_cidadeLabel
-            // 
-            nm_cidadeLabel.AutoSize = true;
-            nm_cidadeLabel.Location = new System.Drawing.Point(51, 167);
-            nm_cidadeLabel.Name = "nm_cidadeLabel";
-            nm_cidadeLabel.Size = new System.Drawing.Size(89, 29);
-            nm_cidadeLabel.TabIndex = 7;
-            nm_cidadeLabel.Text = "Cidade:";
             // 
             // nm_cidadeTextBox
             // 
@@ -166,15 +211,6 @@
             this.nm_cidadeTextBox.Size = new System.Drawing.Size(252, 37);
             this.nm_cidadeTextBox.TabIndex = 8;
             // 
-            // nm_bairroLabel
-            // 
-            nm_bairroLabel.AutoSize = true;
-            nm_bairroLabel.Location = new System.Drawing.Point(60, 208);
-            nm_bairroLabel.Name = "nm_bairroLabel";
-            nm_bairroLabel.Size = new System.Drawing.Size(80, 29);
-            nm_bairroLabel.TabIndex = 9;
-            nm_bairroLabel.Text = "Bairro:";
-            // 
             // nm_bairroTextBox
             // 
             this.nm_bairroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbFornecedorBindingSource, "nm_bairro", true));
@@ -182,15 +218,6 @@
             this.nm_bairroTextBox.Name = "nm_bairroTextBox";
             this.nm_bairroTextBox.Size = new System.Drawing.Size(189, 37);
             this.nm_bairroTextBox.TabIndex = 10;
-            // 
-            // sg_estadoLabel
-            // 
-            sg_estadoLabel.AutoSize = true;
-            sg_estadoLabel.Location = new System.Drawing.Point(407, 167);
-            sg_estadoLabel.Name = "sg_estadoLabel";
-            sg_estadoLabel.Size = new System.Drawing.Size(88, 29);
-            sg_estadoLabel.TabIndex = 11;
-            sg_estadoLabel.Text = "Estado:";
             // 
             // sg_estadoTextBox
             // 
@@ -200,15 +227,6 @@
             this.sg_estadoTextBox.Size = new System.Drawing.Size(78, 37);
             this.sg_estadoTextBox.TabIndex = 12;
             // 
-            // cd_cepLabel
-            // 
-            cd_cepLabel.AutoSize = true;
-            cd_cepLabel.Location = new System.Drawing.Point(338, 211);
-            cd_cepLabel.Name = "cd_cepLabel";
-            cd_cepLabel.Size = new System.Drawing.Size(60, 29);
-            cd_cepLabel.TabIndex = 13;
-            cd_cepLabel.Text = "CEP:";
-            // 
             // cd_cepTextBox
             // 
             this.cd_cepTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbFornecedorBindingSource, "cd_cep", true));
@@ -217,15 +235,6 @@
             this.cd_cepTextBox.Size = new System.Drawing.Size(176, 37);
             this.cd_cepTextBox.TabIndex = 14;
             // 
-            // ds_telefoneLabel
-            // 
-            ds_telefoneLabel.AutoSize = true;
-            ds_telefoneLabel.Location = new System.Drawing.Point(34, 254);
-            ds_telefoneLabel.Name = "ds_telefoneLabel";
-            ds_telefoneLabel.Size = new System.Drawing.Size(106, 29);
-            ds_telefoneLabel.TabIndex = 15;
-            ds_telefoneLabel.Text = "Telefone:";
-            // 
             // ds_telefoneTextBox
             // 
             this.ds_telefoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbFornecedorBindingSource, "ds_telefone", true));
@@ -233,15 +242,6 @@
             this.ds_telefoneTextBox.Name = "ds_telefoneTextBox";
             this.ds_telefoneTextBox.Size = new System.Drawing.Size(189, 37);
             this.ds_telefoneTextBox.TabIndex = 16;
-            // 
-            // ds_emailLabel
-            // 
-            ds_emailLabel.AutoSize = true;
-            ds_emailLabel.Location = new System.Drawing.Point(56, 297);
-            ds_emailLabel.Name = "ds_emailLabel";
-            ds_emailLabel.Size = new System.Drawing.Size(84, 29);
-            ds_emailLabel.TabIndex = 17;
-            ds_emailLabel.Text = "E-mail:";
             // 
             // ds_emailTextBox
             // 
@@ -260,6 +260,7 @@
             this.btnCancelar.TabIndex = 38;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnImprimir
             // 
@@ -280,6 +281,7 @@
             this.btnAlterar.TabIndex = 36;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnNovo
             // 
@@ -290,6 +292,7 @@
             this.btnNovo.TabIndex = 35;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnSair
             // 
@@ -300,6 +303,7 @@
             this.btnSair.TabIndex = 34;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnSalvar
             // 
@@ -310,6 +314,7 @@
             this.btnSalvar.TabIndex = 33;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnPesquisar
             // 
@@ -330,6 +335,7 @@
             this.btnExcluir.TabIndex = 31;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnProximo
             // 
@@ -340,6 +346,7 @@
             this.btnProximo.TabIndex = 30;
             this.btnProximo.Text = "Próximo";
             this.btnProximo.UseVisualStyleBackColor = true;
+            this.btnProximo.Click += new System.EventHandler(this.btnProximo_Click);
             // 
             // btnAnterior
             // 
@@ -350,12 +357,14 @@
             this.btnAnterior.TabIndex = 29;
             this.btnAnterior.Text = "Anterior";
             this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // frmFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 544);
+            this.ControlBox = false;
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnAlterar);
@@ -385,9 +394,9 @@
             this.Controls.Add(ds_emailLabel);
             this.Controls.Add(this.ds_emailTextBox);
             this.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "frmFornecedor";
-            this.Text = "frmFornecedor";
+            this.Text = "Fornecedor";
             this.Load += new System.EventHandler(this.frmFornecedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.contasDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbFornecedorBindingSource)).EndInit();

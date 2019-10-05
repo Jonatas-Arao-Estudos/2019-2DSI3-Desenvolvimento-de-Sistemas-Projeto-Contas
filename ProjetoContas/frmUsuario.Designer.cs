@@ -45,12 +45,12 @@
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.cd_usuarioTextBox = new System.Windows.Forms.TextBox();
+            this.tbUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.contasDataSet = new ProjetoContas.contasDataSet();
             this.nm_usuarioTextBox = new System.Windows.Forms.TextBox();
             this.sg_nivelTextBox = new System.Windows.Forms.TextBox();
             this.nm_loginTextBox = new System.Windows.Forms.TextBox();
             this.ds_senhaTextBox = new System.Windows.Forms.TextBox();
-            this.tbUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.contasDataSet = new ProjetoContas.contasDataSet();
             this.tbUsuarioTableAdapter = new ProjetoContas.contasDataSetTableAdapters.tbUsuarioTableAdapter();
             this.tableAdapterManager = new ProjetoContas.contasDataSetTableAdapters.TableAdapterManager();
             cd_usuarioLabel = new System.Windows.Forms.Label();
@@ -229,6 +229,16 @@
             this.cd_usuarioTextBox.Size = new System.Drawing.Size(63, 37);
             this.cd_usuarioTextBox.TabIndex = 11;
             // 
+            // tbUsuarioBindingSource
+            // 
+            this.tbUsuarioBindingSource.DataMember = "tbUsuario";
+            this.tbUsuarioBindingSource.DataSource = this.contasDataSet;
+            // 
+            // contasDataSet
+            // 
+            this.contasDataSet.DataSetName = "contasDataSet";
+            this.contasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // nm_usuarioTextBox
             // 
             this.nm_usuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbUsuarioBindingSource, "nm_usuario", true));
@@ -265,16 +275,6 @@
             this.ds_senhaTextBox.Size = new System.Drawing.Size(258, 37);
             this.ds_senhaTextBox.TabIndex = 19;
             // 
-            // tbUsuarioBindingSource
-            // 
-            this.tbUsuarioBindingSource.DataMember = "tbUsuario";
-            this.tbUsuarioBindingSource.DataSource = this.contasDataSet;
-            // 
-            // contasDataSet
-            // 
-            this.contasDataSet.DataSetName = "contasDataSet";
-            this.contasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tbUsuarioTableAdapter
             // 
             this.tbUsuarioTableAdapter.ClearBeforeFill = true;
@@ -294,6 +294,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 450);
+            this.ControlBox = false;
             this.Controls.Add(cd_usuarioLabel);
             this.Controls.Add(this.cd_usuarioTextBox);
             this.Controls.Add(nm_usuarioLabel);
@@ -316,7 +317,7 @@
             this.Controls.Add(this.btnAnterior);
             this.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmUsuario";
-            this.Text = "frmUsuario";
+            this.Text = "Usuario";
             this.Load += new System.EventHandler(this.frmUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tbUsuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contasDataSet)).EndInit();
