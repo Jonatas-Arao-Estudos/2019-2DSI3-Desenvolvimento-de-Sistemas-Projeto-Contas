@@ -12,6 +12,7 @@ namespace ProjetoContas
 {
     public partial class frmCliente : Form
     {
+        public static int codigo;
         public frmCliente()
         {
             InitializeComponent();
@@ -136,6 +137,18 @@ namespace ProjetoContas
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            int reg;
+            codigo = 0;
+            frmPesquisaCliente fpc = new frmPesquisaCliente();
+            fpc.ShowDialog();
+            if (codigo > 0)
+            {
+                reg = tbClienteBindingSource.Find("cd_cliente", codigo);
+                tbClienteBindingSource.Position = reg;
+            }
         }
     }
 }

@@ -25,7 +25,7 @@ namespace ProjetoContas
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)

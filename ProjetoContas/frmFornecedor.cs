@@ -12,6 +12,7 @@ namespace ProjetoContas
 {
     public partial class frmFornecedor : Form
     {
+        public static int codigo;
         public frmFornecedor()
         {
             InitializeComponent();
@@ -136,6 +137,19 @@ namespace ProjetoContas
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            int reg;
+            codigo = 0;
+            frmPesquisaFornecedor fpf = new frmPesquisaFornecedor();
+            fpf.ShowDialog();
+            if (codigo > 0)
+            {
+                reg = tbFornecedorBindingSource.Find("cd_Fornecedor", codigo);
+                tbFornecedorBindingSource.Position = reg;
+            }
         }
     }
 }

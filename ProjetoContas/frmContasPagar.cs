@@ -12,6 +12,7 @@ namespace ProjetoContas
 {
     public partial class frmContasPagar : Form
     {
+        public static int codigo;
         public frmContasPagar()
         {
             InitializeComponent();
@@ -126,6 +127,18 @@ namespace ProjetoContas
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            int reg;
+            codigo = 0;
+            frmPesquisaContasPagar fpcp = new frmPesquisaContasPagar();
+            fpcp.ShowDialog();
+            if (codigo > 0)
+            {
+                reg = tbContasPagarBindingSource.Find("cd_conta", codigo);
+                tbContasPagarBindingSource.Position = reg;
+            }
         }
     }
 }

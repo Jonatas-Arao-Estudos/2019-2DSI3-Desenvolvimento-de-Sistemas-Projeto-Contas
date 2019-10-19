@@ -40,17 +40,36 @@ C:\Users\aluno2\Documents\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\
 C:\Users\aluno2\Documents\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.csproj.CoreCompileInputs.cache
 C:\Users\aluno2\Documents\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.exe
 C:\Users\aluno2\Documents\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.pdb
+C:\Users\jonat\OneDrive - Etec Centro Paula Souza\Atividades ETEC\Desenvolvimento de Sistemas\2DSI3\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\bin\Debug\contas.mdf
+C:\Users\jonat\OneDrive - Etec Centro Paula Souza\Atividades ETEC\Desenvolvimento de Sistemas\2DSI3\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\bin\Debug\contas_log.ldf
+C:\Users\jonat\OneDrive - Etec Centro Paula Souza\Atividades ETEC\Desenvolvimento de Sistemas\2DSI3\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\bin\Debug\ProjetoContas.exe.config
+C:\Users\jonat\OneDrive - Etec Centro Paula Souza\Atividades ETEC\Desenvolvimento de Sistemas\2DSI3\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\bin\Debug\ProjetoContas.exe
+C:\Users\jonat\OneDrive - Etec Centro Paula Souza\Atividades ETEC\Desenvolvimento de Sistemas\2DSI3\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\bin\Debug\ProjetoContas.pdb
+C:\Users\jonat\OneDrive - Etec Centro Paula Souza\Atividades ETEC\Desenvolvimento de Sistemas\2DSI3\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.csprojAssemblyReference.cache
+C:\Users\jonat\OneDrive - Etec Centro Paula Souza\Atividades ETEC\Desenvolvimento de Sistemas\2DSI3\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmCliente.resources
+C:\Users\jonat\OneDrive - Etec Centro Paula Souza\Atividades ETEC\Desenvolvimento de Sistemas\2DSI3\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmContasPagar.resources
+C:\Users\jonat\OneDrive - Etec Centro Paula Souza\Atividades ETEC\Desenvolvimento de Sistemas\2DSI3\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmContasReceber.resources
+C:\Users\jonat\OneDrive - Etec Centro Paula Souza\Atividades ETEC\Desenvolvimento de Sistemas\2DSI3\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmFornecedor.resources
+C:\Users\jonat\OneDrive - Etec Centro Paula Souza\Atividades ETEC\Desenvolvimento de Sistemas\2DSI3\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmLogin.resources
+C:\Users\jonat\OneDrive - Etec Centro Paula Souza\Atividades ETEC\Desenvolvimento de Sistemas\2DSI3\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmPesquisaUsuario.resources
+C:\Users\jonat\OneDrive - Etec Centro Paula Souza\Atividades ETEC\Desenvolvimento de Sistemas\2DSI3\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmPrincipal.resources
+C:\Users\jonat\OneDrive - Etec Centro Paula Souza\Atividades ETEC\Desenvolvimento de Sistemas\2DSI3\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmUsuario.resources
+C:\Users\jonat\OneDrive - Etec Centro Paula Souza\Atividades ETEC\Desenvolvimento de Sistemas\2DSI3\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.Properties.Resources.resources
+C:\Users\jonat\OneDrive - Etec Centro Paula Souza\Atividades ETEC\Desenvolvimento de Sistemas\2DSI3\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.csproj.GenerateResource.cache
+C:\Users\jonat\OneDrive - Etec Centro Paula Souza\Atividades ETEC\Desenvolvimento de Sistemas\2DSI3\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.csproj.CoreCompileInputs.cache
+C:\Users\jonat\OneDrive - Etec Centro Paula Souza\Atividades ETEC\Desenvolvimento de Sistemas\2DSI3\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.exe
+C:\Users\jonat\OneDrive - Etec Centro Paula Souza\Atividades ETEC\Desenvolvimento de Sistemas\2DSI3\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.pdb
 C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\bin\Debug\contas.mdf
 C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\bin\Debug\contas_log.ldf
 C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\bin\Debug\ProjetoContas.exe.config
 C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\bin\Debug\ProjetoContas.exe
 C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\bin\Debug\ProjetoContas.pdb
-C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.csprojAssemblyReference.cache
 C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmCliente.resources
 C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmContasPagar.resources
 C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmContasReceber.resources
 C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmFornecedor.resources
 C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmLogin.resources
+C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmPesquisaUsuario.resources
 C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmPrincipal.resources
 C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmUsuario.resources
 C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.Properties.Resources.resources
@@ -58,3 +77,7 @@ C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\
 C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.csproj.CoreCompileInputs.cache
 C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.exe
 C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.pdb
+C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmPesquisaCliente.resources
+C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmPesquisaFornecedor.resources
+C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmPesquisaContasPagar.resources
+C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmPesquisaContasReceber.resources
