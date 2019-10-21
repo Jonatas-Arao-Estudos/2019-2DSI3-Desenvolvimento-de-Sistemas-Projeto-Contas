@@ -140,5 +140,27 @@ namespace ProjetoContas
                 tbContasPagarBindingSource.Position = reg;
             }
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            string strDados;
+            Graphics objImpressao = e.Graphics;
+
+            strDados = "FICHA - CONTAS A PAGAR\n" + (char)10;
+            strDados += "Código: " + cd_contaTextBox.Text + (char)10;
+            strDados += "Data de Emissão: " + dt_emissaoDateTimePicker.Text + (char)10;
+            strDados += "Data de Vencimento: " + dt_vencimentoDateTimePicker.Text + (char)10;
+            strDados += "Valor: " + vl_contaTextBox.Text + (char)10;
+            strDados += "Código do Fornecedor: " + id_fornecedorTextBox.Text + (char)10;
+            strDados += "Data de Pagamento: " + dt_pagamentoDateTimePicker.Text + (char)10;
+            strDados += "Valor Pago: " + vl_pagoTextBox.Text + (char)10;
+            strDados += "Observação: " + ds_obsTextBox.Text;
+            objImpressao.DrawString(strDados, new System.Drawing.Font("Corbel", 12, FontStyle.Bold), Brushes.Black, 50, 50);
+        }
     }
 }

@@ -150,5 +150,30 @@ namespace ProjetoContas
                 tbClienteBindingSource.Position = reg;
             }
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.ShowDialog();
+        }
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            string strDados;
+            Graphics objImpressao = e.Graphics;
+            
+            strDados = "FICHA DE CLIENTE\n" + (char)10;
+            strDados += "Código: " + cd_clienteTextBox.Text + (char)10;
+            strDados += "Nome: " + nm_clienteTextBox.Text + (char)10;
+            strDados += "Endereço: " + ds_enderecoTextBox.Text + (char)10;
+            strDados += "Cidade: " + nm_cidadeTextBox.Text + (char)10;
+            strDados += "Bairro: " + nm_bairroTextBox.Text + (char)10;
+            strDados += "Estado: " + sg_estadoTextBox.Text + (char)10;
+            strDados += "CEP: " + cd_cepTextBox.Text + (char)10;
+            strDados += "Nível: " + ds_telefoneTextBox.Text + (char)10;
+            strDados += "Email: " + ds_emailTextBox.Text;
+            objImpressao.DrawString(strDados, new System.Drawing.Font("Corbel", 12, FontStyle.Bold), Brushes.Black, 50, 50);
+        }
+
+
+
     }
 }
