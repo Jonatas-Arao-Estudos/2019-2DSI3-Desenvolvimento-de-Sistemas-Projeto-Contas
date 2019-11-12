@@ -72,6 +72,8 @@ namespace ProjetoContas
 
         private void frmContasReceber_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'contasDataSet.tbCliRec'. Você pode movê-la ou removê-la conforme necessário.
+            this.tbCliRecTableAdapter.Fill(this.contasDataSet.tbCliRec);
             Desabilita();
             // TODO: esta linha de código carrega dados na tabela 'contasDataSet.tbContasReceber'. Você pode movê-la ou removê-la conforme necessário.
             this.tbContasReceberTableAdapter.Fill(this.contasDataSet.tbContasReceber);
@@ -162,6 +164,12 @@ namespace ProjetoContas
             strDados += "Valor Pago: " + vl_pagoTextBox.Text + (char)10;
             strDados += "Observação: " + ds_obsTextBox.Text;
             objImpressao.DrawString(strDados, new System.Drawing.Font("Corbel", 12, FontStyle.Bold), Brushes.Black, 50, 50);
+        }
+
+        private void id_clienteTextBox_TextChanged(object sender, EventArgs e)
+        {
+            tbCliRecBindingSource.Filter = "cd_cliente = '" + id_clienteTextBox.Text + "'";
+            tbCliRecTableAdapter.Fill(contasDataSet.tbCliRec);
         }
     }
 }

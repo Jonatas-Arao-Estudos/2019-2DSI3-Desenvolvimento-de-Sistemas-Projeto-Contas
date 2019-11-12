@@ -38,10 +38,7 @@
             System.Windows.Forms.Label vl_pagoLabel;
             System.Windows.Forms.Label ds_obsLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmContasReceber));
-            this.contasDataSet = new ProjetoContas.contasDataSet();
-            this.tbContasReceberBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbContasReceberTableAdapter = new ProjetoContas.contasDataSetTableAdapters.tbContasReceberTableAdapter();
-            this.tableAdapterManager = new ProjetoContas.contasDataSetTableAdapters.TableAdapterManager();
+            System.Windows.Forms.Label nm_clienteLabel;
             this.cd_contaTextBox = new System.Windows.Forms.TextBox();
             this.dt_emissaoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dt_vencimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -62,6 +59,13 @@
             this.btnAnterior = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.nm_clienteTextBox = new System.Windows.Forms.TextBox();
+            this.tbCliRecBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.contasDataSet = new ProjetoContas.contasDataSet();
+            this.tbContasReceberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbContasReceberTableAdapter = new ProjetoContas.contasDataSetTableAdapters.tbContasReceberTableAdapter();
+            this.tableAdapterManager = new ProjetoContas.contasDataSetTableAdapters.TableAdapterManager();
+            this.tbCliRecTableAdapter = new ProjetoContas.contasDataSetTableAdapters.tbCliRecTableAdapter();
             cd_contaLabel = new System.Windows.Forms.Label();
             dt_emissaoLabel = new System.Windows.Forms.Label();
             dt_vencimentoLabel = new System.Windows.Forms.Label();
@@ -70,6 +74,8 @@
             dt_pagamentoLabel = new System.Windows.Forms.Label();
             vl_pagoLabel = new System.Windows.Forms.Label();
             ds_obsLabel = new System.Windows.Forms.Label();
+            nm_clienteLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.tbCliRecBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contasDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbContasReceberBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -146,30 +152,6 @@
             ds_obsLabel.TabIndex = 15;
             ds_obsLabel.Text = "Observações:";
             // 
-            // contasDataSet
-            // 
-            this.contasDataSet.DataSetName = "contasDataSet";
-            this.contasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tbContasReceberBindingSource
-            // 
-            this.tbContasReceberBindingSource.DataMember = "tbContasReceber";
-            this.tbContasReceberBindingSource.DataSource = this.contasDataSet;
-            // 
-            // tbContasReceberTableAdapter
-            // 
-            this.tbContasReceberTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.tbClienteTableAdapter = null;
-            this.tableAdapterManager.tbContasPagarTableAdapter = null;
-            this.tableAdapterManager.tbContasReceberTableAdapter = this.tbContasReceberTableAdapter;
-            this.tableAdapterManager.tbFornecedorTableAdapter = null;
-            this.tableAdapterManager.tbUsuarioTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = ProjetoContas.contasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
             // cd_contaTextBox
             // 
             this.cd_contaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbContasReceberBindingSource, "cd_conta", true));
@@ -181,17 +163,19 @@
             // dt_emissaoDateTimePicker
             // 
             this.dt_emissaoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tbContasReceberBindingSource, "dt_emissao", true));
+            this.dt_emissaoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dt_emissaoDateTimePicker.Location = new System.Drawing.Point(236, 76);
             this.dt_emissaoDateTimePicker.Name = "dt_emissaoDateTimePicker";
-            this.dt_emissaoDateTimePicker.Size = new System.Drawing.Size(456, 37);
+            this.dt_emissaoDateTimePicker.Size = new System.Drawing.Size(151, 37);
             this.dt_emissaoDateTimePicker.TabIndex = 4;
             // 
             // dt_vencimentoDateTimePicker
             // 
             this.dt_vencimentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tbContasReceberBindingSource, "dt_vencimento", true));
+            this.dt_vencimentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dt_vencimentoDateTimePicker.Location = new System.Drawing.Point(236, 119);
             this.dt_vencimentoDateTimePicker.Name = "dt_vencimentoDateTimePicker";
-            this.dt_vencimentoDateTimePicker.Size = new System.Drawing.Size(456, 37);
+            this.dt_vencimentoDateTimePicker.Size = new System.Drawing.Size(151, 37);
             this.dt_vencimentoDateTimePicker.TabIndex = 6;
             // 
             // vl_contaTextBox
@@ -209,13 +193,15 @@
             this.id_clienteTextBox.Name = "id_clienteTextBox";
             this.id_clienteTextBox.Size = new System.Drawing.Size(63, 37);
             this.id_clienteTextBox.TabIndex = 10;
+            this.id_clienteTextBox.TextChanged += new System.EventHandler(this.id_clienteTextBox_TextChanged);
             // 
             // dt_pagamentoDateTimePicker
             // 
             this.dt_pagamentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tbContasReceberBindingSource, "dt_pagamento", true));
+            this.dt_pagamentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dt_pagamentoDateTimePicker.Location = new System.Drawing.Point(236, 248);
             this.dt_pagamentoDateTimePicker.Name = "dt_pagamentoDateTimePicker";
-            this.dt_pagamentoDateTimePicker.Size = new System.Drawing.Size(456, 37);
+            this.dt_pagamentoDateTimePicker.Size = new System.Drawing.Size(151, 37);
             this.dt_pagamentoDateTimePicker.TabIndex = 12;
             // 
             // vl_pagoTextBox
@@ -360,12 +346,64 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // nm_clienteLabel
+            // 
+            nm_clienteLabel.AutoSize = true;
+            nm_clienteLabel.Location = new System.Drawing.Point(332, 208);
+            nm_clienteLabel.Name = "nm_clienteLabel";
+            nm_clienteLabel.Size = new System.Drawing.Size(81, 29);
+            nm_clienteLabel.TabIndex = 48;
+            nm_clienteLabel.Text = "Nome:";
+            // 
+            // nm_clienteTextBox
+            // 
+            this.nm_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbCliRecBindingSource, "nm_cliente", true));
+            this.nm_clienteTextBox.Location = new System.Drawing.Point(419, 205);
+            this.nm_clienteTextBox.Name = "nm_clienteTextBox";
+            this.nm_clienteTextBox.Size = new System.Drawing.Size(273, 37);
+            this.nm_clienteTextBox.TabIndex = 49;
+            // 
+            // tbCliRecBindingSource
+            // 
+            this.tbCliRecBindingSource.DataMember = "tbCliRec";
+            this.tbCliRecBindingSource.DataSource = this.contasDataSet;
+            // 
+            // contasDataSet
+            // 
+            this.contasDataSet.DataSetName = "contasDataSet";
+            this.contasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbContasReceberBindingSource
+            // 
+            this.tbContasReceberBindingSource.DataMember = "tbContasReceber";
+            this.tbContasReceberBindingSource.DataSource = this.contasDataSet;
+            // 
+            // tbContasReceberTableAdapter
+            // 
+            this.tbContasReceberTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.tbClienteTableAdapter = null;
+            this.tableAdapterManager.tbContasPagarTableAdapter = null;
+            this.tableAdapterManager.tbContasReceberTableAdapter = this.tbContasReceberTableAdapter;
+            this.tableAdapterManager.tbFornecedorTableAdapter = null;
+            this.tableAdapterManager.tbUsuarioTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = ProjetoContas.contasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // tbCliRecTableAdapter
+            // 
+            this.tbCliRecTableAdapter.ClearBeforeFill = true;
+            // 
             // frmContasReceber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 612);
             this.ControlBox = false;
+            this.Controls.Add(nm_clienteLabel);
+            this.Controls.Add(this.nm_clienteTextBox);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnAlterar);
@@ -397,6 +435,7 @@
             this.Name = "frmContasReceber";
             this.Text = "Contas a Receber";
             this.Load += new System.EventHandler(this.frmContasReceber_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tbCliRecBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contasDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbContasReceberBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -430,5 +469,8 @@
         private System.Windows.Forms.Button btnAnterior;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.BindingSource tbCliRecBindingSource;
+        private contasDataSetTableAdapters.tbCliRecTableAdapter tbCliRecTableAdapter;
+        private System.Windows.Forms.TextBox nm_clienteTextBox;
     }
 }

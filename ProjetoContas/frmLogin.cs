@@ -43,12 +43,21 @@ namespace ProjetoContas
         }
         private void logar()
         {
-            if (txtLogin.Text == "adm" && txtSenha.Text == "123")
+            tbUsuarioBindingSource.Filter = "nm_login ='" + txtLogin.Text + "' and ds_senha ='" + txtSenha.Text + "'";
+            tbUsuarioTableAdapter.Fill(contasDataSet.tbUsuario);
+            if ((txtLogin.Text == "adm" && txtSenha.Text == "123") || tbUsuarioBindingSource.Count > 0)
             {
                 frmPrincipal fp = new frmPrincipal();
                 fp.Show();
                 Hide();
             }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'contasDataSet.tbUsuario'. Você pode movê-la ou removê-la conforme necessário.
+            this.tbUsuarioTableAdapter.Fill(this.contasDataSet.tbUsuario);
+
         }
     }
 }

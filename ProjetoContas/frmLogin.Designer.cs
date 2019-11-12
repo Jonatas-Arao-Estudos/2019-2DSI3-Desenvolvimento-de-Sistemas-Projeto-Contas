@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -35,6 +36,11 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.tbUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.contasDataSet = new ProjetoContas.contasDataSet();
+            this.tbUsuarioTableAdapter = new ProjetoContas.contasDataSetTableAdapters.tbUsuarioTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.tbUsuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contasDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -115,6 +121,20 @@
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // tbUsuarioBindingSource
+            // 
+            this.tbUsuarioBindingSource.DataMember = "tbUsuario";
+            this.tbUsuarioBindingSource.DataSource = this.contasDataSet;
+            // 
+            // contasDataSet
+            // 
+            this.contasDataSet.DataSetName = "contasDataSet";
+            this.contasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbUsuarioTableAdapter
+            // 
+            this.tbUsuarioTableAdapter.ClearBeforeFill = true;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,6 +152,9 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tbUsuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contasDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,6 +169,9 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.BindingSource tbUsuarioBindingSource;
+        private contasDataSet contasDataSet;
+        private contasDataSetTableAdapters.tbUsuarioTableAdapter tbUsuarioTableAdapter;
     }
 }
 
