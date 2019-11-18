@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +16,14 @@ namespace ProjetoContas
         public frmLogin()
         {
             InitializeComponent();
+            Thread t = new Thread(new ThreadStart(IniciarFrm));
+            t.Start();
+            Thread.Sleep(5000);
+            t.Abort();
+        }
+        public void IniciarFrm()
+        {
+            Application.Run(new frmSplashScreen());
         }
 
         private void btnSair_Click(object sender, EventArgs e)
