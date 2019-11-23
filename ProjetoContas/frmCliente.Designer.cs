@@ -39,6 +39,11 @@
             System.Windows.Forms.Label ds_telefoneLabel;
             System.Windows.Forms.Label ds_emailLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
+            System.Windows.Forms.Label sg_tipoLabel;
+            System.Windows.Forms.Label cd_cnpjLabel;
+            System.Windows.Forms.Label cd_rgLabel;
+            System.Windows.Forms.Label cd_ieLabel;
+            System.Windows.Forms.Label cd_cpfLabel;
             this.cd_clienteTextBox = new System.Windows.Forms.TextBox();
             this.tbClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contasDataSet = new ProjetoContas.contasDataSet();
@@ -64,6 +69,11 @@
             this.tableAdapterManager = new ProjetoContas.contasDataSetTableAdapters.TableAdapterManager();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.sg_tipoTextBox = new System.Windows.Forms.TextBox();
+            this.cd_cnpjTextBox = new System.Windows.Forms.TextBox();
+            this.cd_rgTextBox = new System.Windows.Forms.TextBox();
+            this.cd_ieTextBox = new System.Windows.Forms.TextBox();
+            this.cd_cpfMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             cd_clienteLabel = new System.Windows.Forms.Label();
             nm_clienteLabel = new System.Windows.Forms.Label();
             ds_enderecoLabel = new System.Windows.Forms.Label();
@@ -73,6 +83,11 @@
             cd_cepLabel = new System.Windows.Forms.Label();
             ds_telefoneLabel = new System.Windows.Forms.Label();
             ds_emailLabel = new System.Windows.Forms.Label();
+            sg_tipoLabel = new System.Windows.Forms.Label();
+            cd_cnpjLabel = new System.Windows.Forms.Label();
+            cd_rgLabel = new System.Windows.Forms.Label();
+            cd_ieLabel = new System.Windows.Forms.Label();
+            cd_cpfLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tbClienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contasDataSet)).BeginInit();
             this.SuspendLayout();
@@ -261,7 +276,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(317, 456);
+            this.btnCancelar.Location = new System.Drawing.Point(324, 568);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(120, 40);
             this.btnCancelar.TabIndex = 28;
@@ -272,7 +287,7 @@
             // btnImprimir
             // 
             this.btnImprimir.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimir.Location = new System.Drawing.Point(191, 456);
+            this.btnImprimir.Location = new System.Drawing.Point(198, 568);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(120, 40);
             this.btnImprimir.TabIndex = 27;
@@ -283,7 +298,7 @@
             // btnAlterar
             // 
             this.btnAlterar.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Location = new System.Drawing.Point(191, 410);
+            this.btnAlterar.Location = new System.Drawing.Point(198, 522);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(120, 40);
             this.btnAlterar.TabIndex = 26;
@@ -294,7 +309,7 @@
             // btnNovo
             // 
             this.btnNovo.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovo.Location = new System.Drawing.Point(65, 410);
+            this.btnNovo.Location = new System.Drawing.Point(72, 522);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(120, 40);
             this.btnNovo.TabIndex = 25;
@@ -305,7 +320,7 @@
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(443, 456);
+            this.btnSair.Location = new System.Drawing.Point(450, 568);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(120, 40);
             this.btnSair.TabIndex = 24;
@@ -316,7 +331,7 @@
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(443, 410);
+            this.btnSalvar.Location = new System.Drawing.Point(450, 522);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(120, 40);
             this.btnSalvar.TabIndex = 23;
@@ -327,7 +342,7 @@
             // btnPesquisar
             // 
             this.btnPesquisar.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisar.Location = new System.Drawing.Point(65, 456);
+            this.btnPesquisar.Location = new System.Drawing.Point(72, 568);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(120, 40);
             this.btnPesquisar.TabIndex = 22;
@@ -338,7 +353,7 @@
             // btnExcluir
             // 
             this.btnExcluir.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(317, 410);
+            this.btnExcluir.Location = new System.Drawing.Point(324, 522);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(120, 40);
             this.btnExcluir.TabIndex = 21;
@@ -349,7 +364,7 @@
             // btnProximo
             // 
             this.btnProximo.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProximo.Location = new System.Drawing.Point(317, 364);
+            this.btnProximo.Location = new System.Drawing.Point(324, 476);
             this.btnProximo.Name = "btnProximo";
             this.btnProximo.Size = new System.Drawing.Size(120, 40);
             this.btnProximo.TabIndex = 20;
@@ -360,7 +375,7 @@
             // btnAnterior
             // 
             this.btnAnterior.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnterior.Location = new System.Drawing.Point(191, 364);
+            this.btnAnterior.Location = new System.Drawing.Point(198, 476);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(120, 40);
             this.btnAnterior.TabIndex = 19;
@@ -397,12 +412,118 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // sg_tipoLabel
+            // 
+            sg_tipoLabel.AutoSize = true;
+            sg_tipoLabel.Font = new System.Drawing.Font("Corbel", 18F);
+            sg_tipoLabel.Location = new System.Drawing.Point(76, 340);
+            sg_tipoLabel.Name = "sg_tipoLabel";
+            sg_tipoLabel.Size = new System.Drawing.Size(64, 29);
+            sg_tipoLabel.TabIndex = 28;
+            sg_tipoLabel.Text = "Tipo:";
+            // 
+            // sg_tipoTextBox
+            // 
+            this.sg_tipoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "sg_tipo", true));
+            this.sg_tipoTextBox.Font = new System.Drawing.Font("Corbel", 18F);
+            this.sg_tipoTextBox.Location = new System.Drawing.Point(149, 340);
+            this.sg_tipoTextBox.Name = "sg_tipoTextBox";
+            this.sg_tipoTextBox.Size = new System.Drawing.Size(65, 37);
+            this.sg_tipoTextBox.TabIndex = 29;
+            // 
+            // cd_cnpjLabel
+            // 
+            cd_cnpjLabel.AutoSize = true;
+            cd_cnpjLabel.Font = new System.Drawing.Font("Corbel", 18F);
+            cd_cnpjLabel.Location = new System.Drawing.Point(71, 386);
+            cd_cnpjLabel.Name = "cd_cnpjLabel";
+            cd_cnpjLabel.Size = new System.Drawing.Size(71, 29);
+            cd_cnpjLabel.TabIndex = 32;
+            cd_cnpjLabel.Text = "CNPJ:";
+            // 
+            // cd_cnpjTextBox
+            // 
+            this.cd_cnpjTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_cnpj", true));
+            this.cd_cnpjTextBox.Font = new System.Drawing.Font("Corbel", 18F);
+            this.cd_cnpjTextBox.Location = new System.Drawing.Point(148, 383);
+            this.cd_cnpjTextBox.Name = "cd_cnpjTextBox";
+            this.cd_cnpjTextBox.Size = new System.Drawing.Size(189, 37);
+            this.cd_cnpjTextBox.TabIndex = 33;
+            // 
+            // cd_rgLabel
+            // 
+            cd_rgLabel.AutoSize = true;
+            cd_rgLabel.Font = new System.Drawing.Font("Corbel", 18F);
+            cd_rgLabel.Location = new System.Drawing.Point(343, 386);
+            cd_rgLabel.Name = "cd_rgLabel";
+            cd_rgLabel.Size = new System.Drawing.Size(49, 29);
+            cd_rgLabel.TabIndex = 34;
+            cd_rgLabel.Text = "RG:";
+            // 
+            // cd_rgTextBox
+            // 
+            this.cd_rgTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_rg", true));
+            this.cd_rgTextBox.Font = new System.Drawing.Font("Corbel", 18F);
+            this.cd_rgTextBox.Location = new System.Drawing.Point(398, 383);
+            this.cd_rgTextBox.Name = "cd_rgTextBox";
+            this.cd_rgTextBox.Size = new System.Drawing.Size(182, 37);
+            this.cd_rgTextBox.TabIndex = 35;
+            // 
+            // cd_ieLabel
+            // 
+            cd_ieLabel.AutoSize = true;
+            cd_ieLabel.Font = new System.Drawing.Font("Corbel", 18F);
+            cd_ieLabel.Location = new System.Drawing.Point(104, 426);
+            cd_ieLabel.Name = "cd_ieLabel";
+            cd_ieLabel.Size = new System.Drawing.Size(38, 29);
+            cd_ieLabel.TabIndex = 36;
+            cd_ieLabel.Text = "IE:";
+            // 
+            // cd_ieTextBox
+            // 
+            this.cd_ieTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_ie", true));
+            this.cd_ieTextBox.Font = new System.Drawing.Font("Corbel", 18F);
+            this.cd_ieTextBox.Location = new System.Drawing.Point(148, 426);
+            this.cd_ieTextBox.Name = "cd_ieTextBox";
+            this.cd_ieTextBox.Size = new System.Drawing.Size(182, 37);
+            this.cd_ieTextBox.TabIndex = 37;
+            // 
+            // cd_cpfLabel
+            // 
+            cd_cpfLabel.AutoSize = true;
+            cd_cpfLabel.Font = new System.Drawing.Font("Corbel", 18F);
+            cd_cpfLabel.Location = new System.Drawing.Point(217, 340);
+            cd_cpfLabel.Name = "cd_cpfLabel";
+            cd_cpfLabel.Size = new System.Drawing.Size(59, 29);
+            cd_cpfLabel.TabIndex = 37;
+            cd_cpfLabel.Text = "CPF:";
+            // 
+            // cd_cpfMaskedTextBox
+            // 
+            this.cd_cpfMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_cpf", true));
+            this.cd_cpfMaskedTextBox.Font = new System.Drawing.Font("Corbel", 18F);
+            this.cd_cpfMaskedTextBox.Location = new System.Drawing.Point(282, 340);
+            this.cd_cpfMaskedTextBox.Mask = "999.999.999-99";
+            this.cd_cpfMaskedTextBox.Name = "cd_cpfMaskedTextBox";
+            this.cd_cpfMaskedTextBox.Size = new System.Drawing.Size(162, 37);
+            this.cd_cpfMaskedTextBox.TabIndex = 38;
+            // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 544);
+            this.ClientSize = new System.Drawing.Size(631, 628);
             this.ControlBox = false;
+            this.Controls.Add(cd_cpfLabel);
+            this.Controls.Add(this.cd_cpfMaskedTextBox);
+            this.Controls.Add(cd_ieLabel);
+            this.Controls.Add(this.cd_ieTextBox);
+            this.Controls.Add(cd_rgLabel);
+            this.Controls.Add(this.cd_rgTextBox);
+            this.Controls.Add(cd_cnpjLabel);
+            this.Controls.Add(this.cd_cnpjTextBox);
+            this.Controls.Add(sg_tipoLabel);
+            this.Controls.Add(this.sg_tipoTextBox);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnAlterar);
@@ -470,5 +591,10 @@
         private System.Windows.Forms.Button btnAnterior;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.TextBox sg_tipoTextBox;
+        private System.Windows.Forms.TextBox cd_cnpjTextBox;
+        private System.Windows.Forms.TextBox cd_rgTextBox;
+        private System.Windows.Forms.TextBox cd_ieTextBox;
+        private System.Windows.Forms.MaskedTextBox cd_cpfMaskedTextBox;
     }
 }

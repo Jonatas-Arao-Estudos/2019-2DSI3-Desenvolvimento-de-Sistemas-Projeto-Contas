@@ -486,6 +486,16 @@ namespace ProjetoContas {
             
             private global::System.Data.DataColumn columnds_email;
             
+            private global::System.Data.DataColumn columnsg_tipo;
+            
+            private global::System.Data.DataColumn columncd_cpf;
+            
+            private global::System.Data.DataColumn columncd_cnpj;
+            
+            private global::System.Data.DataColumn columncd_rg;
+            
+            private global::System.Data.DataColumn columncd_ie;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public tbClienteDataTable() {
@@ -593,6 +603,46 @@ namespace ProjetoContas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn sg_tipoColumn {
+                get {
+                    return this.columnsg_tipo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn cd_cpfColumn {
+                get {
+                    return this.columncd_cpf;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn cd_cnpjColumn {
+                get {
+                    return this.columncd_cnpj;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn cd_rgColumn {
+                get {
+                    return this.columncd_rg;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn cd_ieColumn {
+                get {
+                    return this.columncd_ie;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -628,7 +678,7 @@ namespace ProjetoContas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tbClienteRow AddtbClienteRow(string nm_cliente, string ds_endereco, string nm_cidade, string nm_bairro, string sg_estado, string cd_cep, string ds_telefone, string ds_email) {
+            public tbClienteRow AddtbClienteRow(string nm_cliente, string ds_endereco, string nm_cidade, string nm_bairro, string sg_estado, string cd_cep, string ds_telefone, string ds_email, string sg_tipo, string cd_cpf, string cd_cnpj, string cd_rg, string cd_ie) {
                 tbClienteRow rowtbClienteRow = ((tbClienteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -639,7 +689,12 @@ namespace ProjetoContas {
                         sg_estado,
                         cd_cep,
                         ds_telefone,
-                        ds_email};
+                        ds_email,
+                        sg_tipo,
+                        cd_cpf,
+                        cd_cnpj,
+                        cd_rg,
+                        cd_ie};
                 rowtbClienteRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtbClienteRow);
                 return rowtbClienteRow;
@@ -678,6 +733,11 @@ namespace ProjetoContas {
                 this.columncd_cep = base.Columns["cd_cep"];
                 this.columnds_telefone = base.Columns["ds_telefone"];
                 this.columnds_email = base.Columns["ds_email"];
+                this.columnsg_tipo = base.Columns["sg_tipo"];
+                this.columncd_cpf = base.Columns["cd_cpf"];
+                this.columncd_cnpj = base.Columns["cd_cnpj"];
+                this.columncd_rg = base.Columns["cd_rg"];
+                this.columncd_ie = base.Columns["cd_ie"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -701,6 +761,16 @@ namespace ProjetoContas {
                 base.Columns.Add(this.columnds_telefone);
                 this.columnds_email = new global::System.Data.DataColumn("ds_email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnds_email);
+                this.columnsg_tipo = new global::System.Data.DataColumn("sg_tipo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsg_tipo);
+                this.columncd_cpf = new global::System.Data.DataColumn("cd_cpf", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncd_cpf);
+                this.columncd_cnpj = new global::System.Data.DataColumn("cd_cnpj", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncd_cnpj);
+                this.columncd_rg = new global::System.Data.DataColumn("cd_rg", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncd_rg);
+                this.columncd_ie = new global::System.Data.DataColumn("cd_ie", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncd_ie);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncd_cliente}, true));
                 this.columncd_cliente.AutoIncrement = true;
@@ -716,6 +786,11 @@ namespace ProjetoContas {
                 this.columncd_cep.MaxLength = 9;
                 this.columnds_telefone.MaxLength = 20;
                 this.columnds_email.MaxLength = 100;
+                this.columnsg_tipo.MaxLength = 1;
+                this.columncd_cpf.MaxLength = 14;
+                this.columncd_cnpj.MaxLength = 18;
+                this.columncd_rg.MaxLength = 15;
+                this.columncd_ie.MaxLength = 15;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1593,6 +1668,16 @@ namespace ProjetoContas {
             
             private global::System.Data.DataColumn columnds_email;
             
+            private global::System.Data.DataColumn columnsg_tipo;
+            
+            private global::System.Data.DataColumn columncd_cpf;
+            
+            private global::System.Data.DataColumn columncd_cnpj;
+            
+            private global::System.Data.DataColumn columncd_rg;
+            
+            private global::System.Data.DataColumn columncd_ie;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public tbFornecedorDataTable() {
@@ -1700,6 +1785,46 @@ namespace ProjetoContas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn sg_tipoColumn {
+                get {
+                    return this.columnsg_tipo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn cd_cpfColumn {
+                get {
+                    return this.columncd_cpf;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn cd_cnpjColumn {
+                get {
+                    return this.columncd_cnpj;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn cd_rgColumn {
+                get {
+                    return this.columncd_rg;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn cd_ieColumn {
+                get {
+                    return this.columncd_ie;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1735,7 +1860,7 @@ namespace ProjetoContas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tbFornecedorRow AddtbFornecedorRow(string nm_fornecedor, string ds_endereco, string nm_cidade, string nm_bairro, string sg_estado, string cd_cep, string ds_telefone, string ds_email) {
+            public tbFornecedorRow AddtbFornecedorRow(string nm_fornecedor, string ds_endereco, string nm_cidade, string nm_bairro, string sg_estado, string cd_cep, string ds_telefone, string ds_email, string sg_tipo, string cd_cpf, string cd_cnpj, string cd_rg, string cd_ie) {
                 tbFornecedorRow rowtbFornecedorRow = ((tbFornecedorRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1746,7 +1871,12 @@ namespace ProjetoContas {
                         sg_estado,
                         cd_cep,
                         ds_telefone,
-                        ds_email};
+                        ds_email,
+                        sg_tipo,
+                        cd_cpf,
+                        cd_cnpj,
+                        cd_rg,
+                        cd_ie};
                 rowtbFornecedorRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtbFornecedorRow);
                 return rowtbFornecedorRow;
@@ -1785,6 +1915,11 @@ namespace ProjetoContas {
                 this.columncd_cep = base.Columns["cd_cep"];
                 this.columnds_telefone = base.Columns["ds_telefone"];
                 this.columnds_email = base.Columns["ds_email"];
+                this.columnsg_tipo = base.Columns["sg_tipo"];
+                this.columncd_cpf = base.Columns["cd_cpf"];
+                this.columncd_cnpj = base.Columns["cd_cnpj"];
+                this.columncd_rg = base.Columns["cd_rg"];
+                this.columncd_ie = base.Columns["cd_ie"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1808,6 +1943,16 @@ namespace ProjetoContas {
                 base.Columns.Add(this.columnds_telefone);
                 this.columnds_email = new global::System.Data.DataColumn("ds_email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnds_email);
+                this.columnsg_tipo = new global::System.Data.DataColumn("sg_tipo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsg_tipo);
+                this.columncd_cpf = new global::System.Data.DataColumn("cd_cpf", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncd_cpf);
+                this.columncd_cnpj = new global::System.Data.DataColumn("cd_cnpj", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncd_cnpj);
+                this.columncd_rg = new global::System.Data.DataColumn("cd_rg", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncd_rg);
+                this.columncd_ie = new global::System.Data.DataColumn("cd_ie", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncd_ie);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncd_fornecedor}, true));
                 this.columncd_fornecedor.AutoIncrement = true;
@@ -1823,6 +1968,11 @@ namespace ProjetoContas {
                 this.columncd_cep.MaxLength = 9;
                 this.columnds_telefone.MaxLength = 20;
                 this.columnds_email.MaxLength = 100;
+                this.columnsg_tipo.MaxLength = 1;
+                this.columncd_cpf.MaxLength = 14;
+                this.columncd_cnpj.MaxLength = 18;
+                this.columncd_rg.MaxLength = 15;
+                this.columncd_ie.MaxLength = 15;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2702,6 +2852,86 @@ namespace ProjetoContas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string sg_tipo {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbCliente.sg_tipoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'sg_tipo\' na tabela \'tbCliente\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbCliente.sg_tipoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string cd_cpf {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbCliente.cd_cpfColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'cd_cpf\' na tabela \'tbCliente\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbCliente.cd_cpfColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string cd_cnpj {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbCliente.cd_cnpjColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'cd_cnpj\' na tabela \'tbCliente\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbCliente.cd_cnpjColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string cd_rg {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbCliente.cd_rgColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'cd_rg\' na tabela \'tbCliente\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbCliente.cd_rgColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string cd_ie {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbCliente.cd_ieColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'cd_ie\' na tabela \'tbCliente\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbCliente.cd_ieColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isnm_clienteNull() {
                 return this.IsNull(this.tabletbCliente.nm_clienteColumn);
             }
@@ -2794,6 +3024,66 @@ namespace ProjetoContas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setds_emailNull() {
                 this[this.tabletbCliente.ds_emailColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Issg_tipoNull() {
+                return this.IsNull(this.tabletbCliente.sg_tipoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setsg_tipoNull() {
+                this[this.tabletbCliente.sg_tipoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Iscd_cpfNull() {
+                return this.IsNull(this.tabletbCliente.cd_cpfColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setcd_cpfNull() {
+                this[this.tabletbCliente.cd_cpfColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Iscd_cnpjNull() {
+                return this.IsNull(this.tabletbCliente.cd_cnpjColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setcd_cnpjNull() {
+                this[this.tabletbCliente.cd_cnpjColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Iscd_rgNull() {
+                return this.IsNull(this.tabletbCliente.cd_rgColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setcd_rgNull() {
+                this[this.tabletbCliente.cd_rgColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Iscd_ieNull() {
+                return this.IsNull(this.tabletbCliente.cd_ieColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setcd_ieNull() {
+                this[this.tabletbCliente.cd_ieColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3429,6 +3719,86 @@ namespace ProjetoContas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string sg_tipo {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbFornecedor.sg_tipoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'sg_tipo\' na tabela \'tbFornecedor\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbFornecedor.sg_tipoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string cd_cpf {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbFornecedor.cd_cpfColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'cd_cpf\' na tabela \'tbFornecedor\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbFornecedor.cd_cpfColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string cd_cnpj {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbFornecedor.cd_cnpjColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'cd_cnpj\' na tabela \'tbFornecedor\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbFornecedor.cd_cnpjColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string cd_rg {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbFornecedor.cd_rgColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'cd_rg\' na tabela \'tbFornecedor\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbFornecedor.cd_rgColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string cd_ie {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbFornecedor.cd_ieColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'cd_ie\' na tabela \'tbFornecedor\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbFornecedor.cd_ieColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isnm_fornecedorNull() {
                 return this.IsNull(this.tabletbFornecedor.nm_fornecedorColumn);
             }
@@ -3521,6 +3891,66 @@ namespace ProjetoContas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setds_emailNull() {
                 this[this.tabletbFornecedor.ds_emailColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Issg_tipoNull() {
+                return this.IsNull(this.tabletbFornecedor.sg_tipoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setsg_tipoNull() {
+                this[this.tabletbFornecedor.sg_tipoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Iscd_cpfNull() {
+                return this.IsNull(this.tabletbFornecedor.cd_cpfColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setcd_cpfNull() {
+                this[this.tabletbFornecedor.cd_cpfColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Iscd_cnpjNull() {
+                return this.IsNull(this.tabletbFornecedor.cd_cnpjColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setcd_cnpjNull() {
+                this[this.tabletbFornecedor.cd_cnpjColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Iscd_rgNull() {
+                return this.IsNull(this.tabletbFornecedor.cd_rgColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setcd_rgNull() {
+                this[this.tabletbFornecedor.cd_rgColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Iscd_ieNull() {
+                return this.IsNull(this.tabletbFornecedor.cd_ieColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setcd_ieNull() {
+                this[this.tabletbFornecedor.cd_ieColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4065,10 +4495,15 @@ namespace ProjetoContas.contasDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("cd_cep", "cd_cep");
             tableMapping.ColumnMappings.Add("ds_telefone", "ds_telefone");
             tableMapping.ColumnMappings.Add("ds_email", "ds_email");
+            tableMapping.ColumnMappings.Add("sg_tipo", "sg_tipo");
+            tableMapping.ColumnMappings.Add("cd_cpf", "cd_cpf");
+            tableMapping.ColumnMappings.Add("cd_cnpj", "cd_cnpj");
+            tableMapping.ColumnMappings.Add("cd_rg", "cd_rg");
+            tableMapping.ColumnMappings.Add("cd_ie", "cd_ie");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tbCliente] WHERE (([cd_cliente] = @Original_cd_cliente) AND ((@IsNull_nm_cliente = 1 AND [nm_cliente] IS NULL) OR ([nm_cliente] = @Original_nm_cliente)) AND ((@IsNull_ds_endereco = 1 AND [ds_endereco] IS NULL) OR ([ds_endereco] = @Original_ds_endereco)) AND ((@IsNull_nm_cidade = 1 AND [nm_cidade] IS NULL) OR ([nm_cidade] = @Original_nm_cidade)) AND ((@IsNull_nm_bairro = 1 AND [nm_bairro] IS NULL) OR ([nm_bairro] = @Original_nm_bairro)) AND ((@IsNull_sg_estado = 1 AND [sg_estado] IS NULL) OR ([sg_estado] = @Original_sg_estado)) AND ((@IsNull_cd_cep = 1 AND [cd_cep] IS NULL) OR ([cd_cep] = @Original_cd_cep)) AND ((@IsNull_ds_telefone = 1 AND [ds_telefone] IS NULL) OR ([ds_telefone] = @Original_ds_telefone)) AND ((@IsNull_ds_email = 1 AND [ds_email] IS NULL) OR ([ds_email] = @Original_ds_email)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [tbCliente] WHERE (([cd_cliente] = @Original_cd_cliente) AND ((@IsNull_nm_cliente = 1 AND [nm_cliente] IS NULL) OR ([nm_cliente] = @Original_nm_cliente)) AND ((@IsNull_ds_endereco = 1 AND [ds_endereco] IS NULL) OR ([ds_endereco] = @Original_ds_endereco)) AND ((@IsNull_nm_cidade = 1 AND [nm_cidade] IS NULL) OR ([nm_cidade] = @Original_nm_cidade)) AND ((@IsNull_nm_bairro = 1 AND [nm_bairro] IS NULL) OR ([nm_bairro] = @Original_nm_bairro)) AND ((@IsNull_sg_estado = 1 AND [sg_estado] IS NULL) OR ([sg_estado] = @Original_sg_estado)) AND ((@IsNull_cd_cep = 1 AND [cd_cep] IS NULL) OR ([cd_cep] = @Original_cd_cep)) AND ((@IsNull_ds_telefone = 1 AND [ds_telefone] IS NULL) OR ([ds_telefone] = @Original_ds_telefone)) AND ((@IsNull_ds_email = 1 AND [ds_email] IS NULL) OR ([ds_email] = @Original_ds_email)) AND ((@IsNull_cd_cnpj = 1 AND [cd_cnpj] IS NULL) OR ([cd_cnpj] = @Original_cd_cnpj)) AND ((@IsNull_cd_cpf = 1 AND [cd_cpf] IS NULL) OR ([cd_cpf] = @Original_cd_cpf)) AND ((@IsNull_cd_ie = 1 AND [cd_ie] IS NULL) OR ([cd_ie] = @Original_cd_ie)) AND ((@IsNull_cd_rg = 1 AND [cd_rg] IS NULL) OR ([cd_rg] = @Original_cd_rg)) AND ((@IsNull_sg_tipo = 1 AND [sg_tipo] IS NULL) OR ([sg_tipo] = @Original_sg_tipo)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cd_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cliente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nm_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nm_cliente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -4087,10 +4522,20 @@ namespace ProjetoContas.contasDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ds_telefone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_telefone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ds_email", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_email", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ds_email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cd_cnpj", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cnpj", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cd_cnpj", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cnpj", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cd_cpf", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cpf", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cd_cpf", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cpf", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cd_ie", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_ie", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cd_ie", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_ie", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cd_rg", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_rg", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cd_rg", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_rg", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_sg_tipo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sg_tipo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sg_tipo", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sg_tipo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbCliente] ([nm_cliente], [ds_endereco], [nm_cidade], [nm_bairro], [sg_estado], [cd_cep], [ds_telefone], [ds_email]) VALUES (@nm_cliente, @ds_endereco, @nm_cidade, @nm_bairro, @sg_estado, @cd_cep, @ds_telefone, @ds_email);
-SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_cep, ds_telefone, ds_email FROM tbCliente WHERE (cd_cliente = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [tbCliente] ([nm_cliente], [ds_endereco], [nm_cidade], [nm_bairro], [sg_estado], [cd_cep], [ds_telefone], [ds_email], [cd_cnpj], [cd_cpf], [cd_ie], [cd_rg], [sg_tipo]) VALUES (@nm_cliente, @ds_endereco, @nm_cidade, @nm_bairro, @sg_estado, @cd_cep, @ds_telefone, @ds_email, @cd_cnpj, @cd_cpf, @cd_ie, @cd_rg, @sg_tipo);
+SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_cep, ds_telefone, ds_email, cd_cnpj, cd_cpf, cd_ie, cd_rg, sg_tipo FROM tbCliente WHERE (cd_cliente = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nm_cliente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nm_cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ds_endereco", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_endereco", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4100,10 +4545,35 @@ SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_cep", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cep", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ds_telefone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_telefone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ds_email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_cnpj", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cnpj", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_cpf", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cpf", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_ie", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_ie", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_rg", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_rg", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sg_tipo", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sg_tipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tbCliente] SET [nm_cliente] = @nm_cliente, [ds_endereco] = @ds_endereco, [nm_cidade] = @nm_cidade, [nm_bairro] = @nm_bairro, [sg_estado] = @sg_estado, [cd_cep] = @cd_cep, [ds_telefone] = @ds_telefone, [ds_email] = @ds_email WHERE (([cd_cliente] = @Original_cd_cliente) AND ((@IsNull_nm_cliente = 1 AND [nm_cliente] IS NULL) OR ([nm_cliente] = @Original_nm_cliente)) AND ((@IsNull_ds_endereco = 1 AND [ds_endereco] IS NULL) OR ([ds_endereco] = @Original_ds_endereco)) AND ((@IsNull_nm_cidade = 1 AND [nm_cidade] IS NULL) OR ([nm_cidade] = @Original_nm_cidade)) AND ((@IsNull_nm_bairro = 1 AND [nm_bairro] IS NULL) OR ([nm_bairro] = @Original_nm_bairro)) AND ((@IsNull_sg_estado = 1 AND [sg_estado] IS NULL) OR ([sg_estado] = @Original_sg_estado)) AND ((@IsNull_cd_cep = 1 AND [cd_cep] IS NULL) OR ([cd_cep] = @Original_cd_cep)) AND ((@IsNull_ds_telefone = 1 AND [ds_telefone] IS NULL) OR ([ds_telefone] = @Original_ds_telefone)) AND ((@IsNull_ds_email = 1 AND [ds_email] IS NULL) OR ([ds_email] = @Original_ds_email)));
-SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_cep, ds_telefone, ds_email FROM tbCliente WHERE (cd_cliente = @cd_cliente)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [tbCliente] SET [nm_cliente] = @nm_cliente, [ds_endereco] = @ds_endereco, " +
+                "[nm_cidade] = @nm_cidade, [nm_bairro] = @nm_bairro, [sg_estado] = @sg_estado, [c" +
+                "d_cep] = @cd_cep, [ds_telefone] = @ds_telefone, [ds_email] = @ds_email, [cd_cnpj" +
+                "] = @cd_cnpj, [cd_cpf] = @cd_cpf, [cd_ie] = @cd_ie, [cd_rg] = @cd_rg, [sg_tipo] " +
+                "= @sg_tipo WHERE (([cd_cliente] = @Original_cd_cliente) AND ((@IsNull_nm_cliente" +
+                " = 1 AND [nm_cliente] IS NULL) OR ([nm_cliente] = @Original_nm_cliente)) AND ((@" +
+                "IsNull_ds_endereco = 1 AND [ds_endereco] IS NULL) OR ([ds_endereco] = @Original_" +
+                "ds_endereco)) AND ((@IsNull_nm_cidade = 1 AND [nm_cidade] IS NULL) OR ([nm_cidad" +
+                "e] = @Original_nm_cidade)) AND ((@IsNull_nm_bairro = 1 AND [nm_bairro] IS NULL) " +
+                "OR ([nm_bairro] = @Original_nm_bairro)) AND ((@IsNull_sg_estado = 1 AND [sg_esta" +
+                "do] IS NULL) OR ([sg_estado] = @Original_sg_estado)) AND ((@IsNull_cd_cep = 1 AN" +
+                "D [cd_cep] IS NULL) OR ([cd_cep] = @Original_cd_cep)) AND ((@IsNull_ds_telefone " +
+                "= 1 AND [ds_telefone] IS NULL) OR ([ds_telefone] = @Original_ds_telefone)) AND (" +
+                "(@IsNull_ds_email = 1 AND [ds_email] IS NULL) OR ([ds_email] = @Original_ds_emai" +
+                "l)) AND ((@IsNull_cd_cnpj = 1 AND [cd_cnpj] IS NULL) OR ([cd_cnpj] = @Original_c" +
+                "d_cnpj)) AND ((@IsNull_cd_cpf = 1 AND [cd_cpf] IS NULL) OR ([cd_cpf] = @Original" +
+                "_cd_cpf)) AND ((@IsNull_cd_ie = 1 AND [cd_ie] IS NULL) OR ([cd_ie] = @Original_c" +
+                "d_ie)) AND ((@IsNull_cd_rg = 1 AND [cd_rg] IS NULL) OR ([cd_rg] = @Original_cd_r" +
+                "g)) AND ((@IsNull_sg_tipo = 1 AND [sg_tipo] IS NULL) OR ([sg_tipo] = @Original_s" +
+                "g_tipo)));\r\nSELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg" +
+                "_estado, cd_cep, ds_telefone, ds_email, cd_cnpj, cd_cpf, cd_ie, cd_rg, sg_tipo F" +
+                "ROM tbCliente WHERE (cd_cliente = @cd_cliente)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nm_cliente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nm_cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ds_endereco", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_endereco", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4113,6 +4583,11 @@ SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_cep", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cep", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ds_telefone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_telefone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ds_email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_cnpj", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cnpj", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_cpf", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cpf", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_ie", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_ie", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_rg", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_rg", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sg_tipo", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sg_tipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cd_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cliente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nm_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nm_cliente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nm_cliente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nm_cliente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4130,6 +4605,16 @@ SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ds_telefone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_telefone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ds_email", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_email", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ds_email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cd_cnpj", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cnpj", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cd_cnpj", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cnpj", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cd_cpf", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cpf", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cd_cpf", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cpf", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cd_ie", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_ie", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cd_ie", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_ie", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cd_rg", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_rg", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cd_rg", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_rg", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_sg_tipo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sg_tipo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sg_tipo", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sg_tipo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_cliente", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -4147,13 +4632,14 @@ SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_c" +
-                "ep, ds_telefone, ds_email FROM dbo.tbCliente";
+                "ep, ds_telefone, ds_email, cd_cnpj, cd_cpf, cd_ie, cd_rg, sg_tipo FROM tbCliente" +
+                "";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estad" +
-                "o, cd_cep, ds_telefone, ds_email\r\nFROM            tbCliente\r\nWHERE        (nm_cl" +
-                "iente LIKE @nome)";
+            this._commandCollection[1].CommandText = "SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_c" +
+                "ep, ds_telefone, ds_email, cd_cnpj, cd_cpf, cd_ie, cd_rg, sg_tipo FROM tbCliente" +
+                " WHERE (nm_cliente LIKE @nome)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nome", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "nm_cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -4251,7 +4737,7 @@ SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_cd_cliente, string Original_nm_cliente, string Original_ds_endereco, string Original_nm_cidade, string Original_nm_bairro, string Original_sg_estado, string Original_cd_cep, string Original_ds_telefone, string Original_ds_email) {
+        public virtual int Delete(int Original_cd_cliente, string Original_nm_cliente, string Original_ds_endereco, string Original_nm_cidade, string Original_nm_bairro, string Original_sg_estado, string Original_cd_cep, string Original_ds_telefone, string Original_ds_email, string Original_cd_cnpj, string Original_cd_cpf, string Original_cd_ie, string Original_cd_rg, string Original_sg_tipo) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_cd_cliente));
             if ((Original_nm_cliente == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -4317,6 +4803,46 @@ SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_ds_email));
             }
+            if ((Original_cd_cnpj == null)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_cd_cnpj));
+            }
+            if ((Original_cd_cpf == null)) {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_cd_cpf));
+            }
+            if ((Original_cd_ie == null)) {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_cd_ie));
+            }
+            if ((Original_cd_rg == null)) {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((string)(Original_cd_rg));
+            }
+            if ((Original_sg_tipo == null)) {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((string)(Original_sg_tipo));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4337,7 +4863,7 @@ SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string nm_cliente, string ds_endereco, string nm_cidade, string nm_bairro, string sg_estado, string cd_cep, string ds_telefone, string ds_email) {
+        public virtual int Insert(string nm_cliente, string ds_endereco, string nm_cidade, string nm_bairro, string sg_estado, string cd_cep, string ds_telefone, string ds_email, string cd_cnpj, string cd_cpf, string cd_ie, string cd_rg, string sg_tipo) {
             if ((nm_cliente == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -4386,6 +4912,36 @@ SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = ((string)(ds_email));
             }
+            if ((cd_cnpj == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(cd_cnpj));
+            }
+            if ((cd_cpf == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(cd_cpf));
+            }
+            if ((cd_ie == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(cd_ie));
+            }
+            if ((cd_rg == null)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(cd_rg));
+            }
+            if ((sg_tipo == null)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(sg_tipo));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4415,6 +4971,11 @@ SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_
                     string cd_cep, 
                     string ds_telefone, 
                     string ds_email, 
+                    string cd_cnpj, 
+                    string cd_cpf, 
+                    string cd_ie, 
+                    string cd_rg, 
+                    string sg_tipo, 
                     int Original_cd_cliente, 
                     string Original_nm_cliente, 
                     string Original_ds_endereco, 
@@ -4424,6 +4985,11 @@ SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_
                     string Original_cd_cep, 
                     string Original_ds_telefone, 
                     string Original_ds_email, 
+                    string Original_cd_cnpj, 
+                    string Original_cd_cpf, 
+                    string Original_cd_ie, 
+                    string Original_cd_rg, 
+                    string Original_sg_tipo, 
                     int cd_cliente) {
             if ((nm_cliente == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -4473,72 +5039,142 @@ SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(ds_email));
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_cd_cliente));
-            if ((Original_nm_cliente == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+            if ((cd_cnpj == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(cd_cnpj));
+            }
+            if ((cd_cpf == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(cd_cpf));
+            }
+            if ((cd_ie == null)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_nm_cliente));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(cd_ie));
             }
-            if ((Original_ds_endereco == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+            if ((cd_rg == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(cd_rg));
+            }
+            if ((sg_tipo == null)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_ds_endereco));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(sg_tipo));
+            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_cd_cliente));
+            if ((Original_nm_cliente == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_nm_cliente));
+            }
+            if ((Original_ds_endereco == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_ds_endereco));
             }
             if ((Original_nm_cidade == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_nm_cidade));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_nm_cidade));
             }
             if ((Original_nm_bairro == null)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_nm_bairro));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_nm_bairro));
             }
             if ((Original_sg_estado == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_sg_estado));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_sg_estado));
             }
             if ((Original_cd_cep == null)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_cd_cep));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_cd_cep));
             }
             if ((Original_ds_telefone == null)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_ds_telefone));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_ds_telefone));
             }
             if ((Original_ds_email == null)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_ds_email));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_ds_email));
             }
-            this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(cd_cliente));
+            if ((Original_cd_cnpj == null)) {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_cd_cnpj));
+            }
+            if ((Original_cd_cpf == null)) {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_cd_cpf));
+            }
+            if ((Original_cd_ie == null)) {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_cd_ie));
+            }
+            if ((Original_cd_rg == null)) {
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_cd_rg));
+            }
+            if ((Original_sg_tipo == null)) {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_sg_tipo));
+            }
+            this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(cd_cliente));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4568,6 +5204,11 @@ SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_
                     string cd_cep, 
                     string ds_telefone, 
                     string ds_email, 
+                    string cd_cnpj, 
+                    string cd_cpf, 
+                    string cd_ie, 
+                    string cd_rg, 
+                    string sg_tipo, 
                     int Original_cd_cliente, 
                     string Original_nm_cliente, 
                     string Original_ds_endereco, 
@@ -4576,8 +5217,13 @@ SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_
                     string Original_sg_estado, 
                     string Original_cd_cep, 
                     string Original_ds_telefone, 
-                    string Original_ds_email) {
-            return this.Update(nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_cep, ds_telefone, ds_email, Original_cd_cliente, Original_nm_cliente, Original_ds_endereco, Original_nm_cidade, Original_nm_bairro, Original_sg_estado, Original_cd_cep, Original_ds_telefone, Original_ds_email, Original_cd_cliente);
+                    string Original_ds_email, 
+                    string Original_cd_cnpj, 
+                    string Original_cd_cpf, 
+                    string Original_cd_ie, 
+                    string Original_cd_rg, 
+                    string Original_sg_tipo) {
+            return this.Update(nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_cep, ds_telefone, ds_email, cd_cnpj, cd_cpf, cd_ie, cd_rg, sg_tipo, Original_cd_cliente, Original_nm_cliente, Original_ds_endereco, Original_nm_cidade, Original_nm_bairro, Original_sg_estado, Original_cd_cep, Original_ds_telefone, Original_ds_email, Original_cd_cnpj, Original_cd_cpf, Original_cd_ie, Original_cd_rg, Original_sg_tipo, Original_cd_cliente);
         }
     }
     
@@ -5895,10 +6541,15 @@ SELECT cd_conta, dt_emissao, dt_vencimento, vl_conta, id_cliente, dt_pagamento, 
             tableMapping.ColumnMappings.Add("cd_cep", "cd_cep");
             tableMapping.ColumnMappings.Add("ds_telefone", "ds_telefone");
             tableMapping.ColumnMappings.Add("ds_email", "ds_email");
+            tableMapping.ColumnMappings.Add("sg_tipo", "sg_tipo");
+            tableMapping.ColumnMappings.Add("cd_cpf", "cd_cpf");
+            tableMapping.ColumnMappings.Add("cd_cnpj", "cd_cnpj");
+            tableMapping.ColumnMappings.Add("cd_rg", "cd_rg");
+            tableMapping.ColumnMappings.Add("cd_ie", "cd_ie");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tbFornecedor] WHERE (([cd_fornecedor] = @Original_cd_fornecedor) AND ((@IsNull_nm_fornecedor = 1 AND [nm_fornecedor] IS NULL) OR ([nm_fornecedor] = @Original_nm_fornecedor)) AND ((@IsNull_ds_endereco = 1 AND [ds_endereco] IS NULL) OR ([ds_endereco] = @Original_ds_endereco)) AND ((@IsNull_nm_cidade = 1 AND [nm_cidade] IS NULL) OR ([nm_cidade] = @Original_nm_cidade)) AND ((@IsNull_nm_bairro = 1 AND [nm_bairro] IS NULL) OR ([nm_bairro] = @Original_nm_bairro)) AND ((@IsNull_sg_estado = 1 AND [sg_estado] IS NULL) OR ([sg_estado] = @Original_sg_estado)) AND ((@IsNull_cd_cep = 1 AND [cd_cep] IS NULL) OR ([cd_cep] = @Original_cd_cep)) AND ((@IsNull_ds_telefone = 1 AND [ds_telefone] IS NULL) OR ([ds_telefone] = @Original_ds_telefone)) AND ((@IsNull_ds_email = 1 AND [ds_email] IS NULL) OR ([ds_email] = @Original_ds_email)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [tbFornecedor] WHERE (([cd_fornecedor] = @Original_cd_fornecedor) AND ((@IsNull_nm_fornecedor = 1 AND [nm_fornecedor] IS NULL) OR ([nm_fornecedor] = @Original_nm_fornecedor)) AND ((@IsNull_ds_endereco = 1 AND [ds_endereco] IS NULL) OR ([ds_endereco] = @Original_ds_endereco)) AND ((@IsNull_nm_cidade = 1 AND [nm_cidade] IS NULL) OR ([nm_cidade] = @Original_nm_cidade)) AND ((@IsNull_nm_bairro = 1 AND [nm_bairro] IS NULL) OR ([nm_bairro] = @Original_nm_bairro)) AND ((@IsNull_sg_estado = 1 AND [sg_estado] IS NULL) OR ([sg_estado] = @Original_sg_estado)) AND ((@IsNull_cd_cep = 1 AND [cd_cep] IS NULL) OR ([cd_cep] = @Original_cd_cep)) AND ((@IsNull_ds_telefone = 1 AND [ds_telefone] IS NULL) OR ([ds_telefone] = @Original_ds_telefone)) AND ((@IsNull_ds_email = 1 AND [ds_email] IS NULL) OR ([ds_email] = @Original_ds_email)) AND ((@IsNull_cd_cnpj = 1 AND [cd_cnpj] IS NULL) OR ([cd_cnpj] = @Original_cd_cnpj)) AND ((@IsNull_cd_cpf = 1 AND [cd_cpf] IS NULL) OR ([cd_cpf] = @Original_cd_cpf)) AND ((@IsNull_cd_ie = 1 AND [cd_ie] IS NULL) OR ([cd_ie] = @Original_cd_ie)) AND ((@IsNull_cd_rg = 1 AND [cd_rg] IS NULL) OR ([cd_rg] = @Original_cd_rg)) AND ((@IsNull_sg_tipo = 1 AND [sg_tipo] IS NULL) OR ([sg_tipo] = @Original_sg_tipo)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cd_fornecedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_fornecedor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nm_fornecedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nm_fornecedor", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -5917,10 +6568,20 @@ SELECT cd_conta, dt_emissao, dt_vencimento, vl_conta, id_cliente, dt_pagamento, 
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ds_telefone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_telefone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ds_email", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_email", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ds_email", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cd_cnpj", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cnpj", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cd_cnpj", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cnpj", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cd_cpf", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cpf", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cd_cpf", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cpf", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cd_ie", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_ie", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cd_ie", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_ie", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cd_rg", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_rg", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cd_rg", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_rg", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_sg_tipo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sg_tipo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sg_tipo", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sg_tipo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbFornecedor] ([nm_fornecedor], [ds_endereco], [nm_cidade], [nm_bairro], [sg_estado], [cd_cep], [ds_telefone], [ds_email]) VALUES (@nm_fornecedor, @ds_endereco, @nm_cidade, @nm_bairro, @sg_estado, @cd_cep, @ds_telefone, @ds_email);
-SELECT cd_fornecedor, nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_cep, ds_telefone, ds_email FROM tbFornecedor WHERE (cd_fornecedor = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [tbFornecedor] ([nm_fornecedor], [ds_endereco], [nm_cidade], [nm_bairro], [sg_estado], [cd_cep], [ds_telefone], [ds_email], [cd_cnpj], [cd_cpf], [cd_ie], [cd_rg], [sg_tipo]) VALUES (@nm_fornecedor, @ds_endereco, @nm_cidade, @nm_bairro, @sg_estado, @cd_cep, @ds_telefone, @ds_email, @cd_cnpj, @cd_cpf, @cd_ie, @cd_rg, @sg_tipo);
+SELECT cd_fornecedor, nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_cep, ds_telefone, ds_email, cd_cnpj, cd_cpf, cd_ie, cd_rg, sg_tipo FROM tbFornecedor WHERE (cd_fornecedor = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nm_fornecedor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nm_fornecedor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ds_endereco", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_endereco", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5930,10 +6591,36 @@ SELECT cd_fornecedor, nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg_estad
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_cep", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cep", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ds_telefone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_telefone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ds_email", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_cnpj", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cnpj", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_cpf", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cpf", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_ie", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_ie", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_rg", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_rg", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sg_tipo", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sg_tipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tbFornecedor] SET [nm_fornecedor] = @nm_fornecedor, [ds_endereco] = @ds_endereco, [nm_cidade] = @nm_cidade, [nm_bairro] = @nm_bairro, [sg_estado] = @sg_estado, [cd_cep] = @cd_cep, [ds_telefone] = @ds_telefone, [ds_email] = @ds_email WHERE (([cd_fornecedor] = @Original_cd_fornecedor) AND ((@IsNull_nm_fornecedor = 1 AND [nm_fornecedor] IS NULL) OR ([nm_fornecedor] = @Original_nm_fornecedor)) AND ((@IsNull_ds_endereco = 1 AND [ds_endereco] IS NULL) OR ([ds_endereco] = @Original_ds_endereco)) AND ((@IsNull_nm_cidade = 1 AND [nm_cidade] IS NULL) OR ([nm_cidade] = @Original_nm_cidade)) AND ((@IsNull_nm_bairro = 1 AND [nm_bairro] IS NULL) OR ([nm_bairro] = @Original_nm_bairro)) AND ((@IsNull_sg_estado = 1 AND [sg_estado] IS NULL) OR ([sg_estado] = @Original_sg_estado)) AND ((@IsNull_cd_cep = 1 AND [cd_cep] IS NULL) OR ([cd_cep] = @Original_cd_cep)) AND ((@IsNull_ds_telefone = 1 AND [ds_telefone] IS NULL) OR ([ds_telefone] = @Original_ds_telefone)) AND ((@IsNull_ds_email = 1 AND [ds_email] IS NULL) OR ([ds_email] = @Original_ds_email)));
-SELECT cd_fornecedor, nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_cep, ds_telefone, ds_email FROM tbFornecedor WHERE (cd_fornecedor = @cd_fornecedor)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [tbFornecedor] SET [nm_fornecedor] = @nm_fornecedor, [ds_endereco] = @ds_e" +
+                "ndereco, [nm_cidade] = @nm_cidade, [nm_bairro] = @nm_bairro, [sg_estado] = @sg_e" +
+                "stado, [cd_cep] = @cd_cep, [ds_telefone] = @ds_telefone, [ds_email] = @ds_email," +
+                " [cd_cnpj] = @cd_cnpj, [cd_cpf] = @cd_cpf, [cd_ie] = @cd_ie, [cd_rg] = @cd_rg, [" +
+                "sg_tipo] = @sg_tipo WHERE (([cd_fornecedor] = @Original_cd_fornecedor) AND ((@Is" +
+                "Null_nm_fornecedor = 1 AND [nm_fornecedor] IS NULL) OR ([nm_fornecedor] = @Origi" +
+                "nal_nm_fornecedor)) AND ((@IsNull_ds_endereco = 1 AND [ds_endereco] IS NULL) OR " +
+                "([ds_endereco] = @Original_ds_endereco)) AND ((@IsNull_nm_cidade = 1 AND [nm_cid" +
+                "ade] IS NULL) OR ([nm_cidade] = @Original_nm_cidade)) AND ((@IsNull_nm_bairro = " +
+                "1 AND [nm_bairro] IS NULL) OR ([nm_bairro] = @Original_nm_bairro)) AND ((@IsNull" +
+                "_sg_estado = 1 AND [sg_estado] IS NULL) OR ([sg_estado] = @Original_sg_estado)) " +
+                "AND ((@IsNull_cd_cep = 1 AND [cd_cep] IS NULL) OR ([cd_cep] = @Original_cd_cep))" +
+                " AND ((@IsNull_ds_telefone = 1 AND [ds_telefone] IS NULL) OR ([ds_telefone] = @O" +
+                "riginal_ds_telefone)) AND ((@IsNull_ds_email = 1 AND [ds_email] IS NULL) OR ([ds" +
+                "_email] = @Original_ds_email)) AND ((@IsNull_cd_cnpj = 1 AND [cd_cnpj] IS NULL) " +
+                "OR ([cd_cnpj] = @Original_cd_cnpj)) AND ((@IsNull_cd_cpf = 1 AND [cd_cpf] IS NUL" +
+                "L) OR ([cd_cpf] = @Original_cd_cpf)) AND ((@IsNull_cd_ie = 1 AND [cd_ie] IS NULL" +
+                ") OR ([cd_ie] = @Original_cd_ie)) AND ((@IsNull_cd_rg = 1 AND [cd_rg] IS NULL) O" +
+                "R ([cd_rg] = @Original_cd_rg)) AND ((@IsNull_sg_tipo = 1 AND [sg_tipo] IS NULL) " +
+                "OR ([sg_tipo] = @Original_sg_tipo)));\r\nSELECT cd_fornecedor, nm_fornecedor, ds_e" +
+                "ndereco, nm_cidade, nm_bairro, sg_estado, cd_cep, ds_telefone, ds_email, cd_cnpj" +
+                ", cd_cpf, cd_ie, cd_rg, sg_tipo FROM tbFornecedor WHERE (cd_fornecedor = @cd_for" +
+                "necedor)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nm_fornecedor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nm_fornecedor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ds_endereco", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_endereco", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5943,6 +6630,11 @@ SELECT cd_fornecedor, nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg_estad
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_cep", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cep", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ds_telefone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_telefone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ds_email", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_cnpj", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cnpj", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_cpf", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cpf", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_ie", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_ie", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_rg", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_rg", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sg_tipo", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sg_tipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cd_fornecedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_fornecedor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nm_fornecedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nm_fornecedor", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nm_fornecedor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nm_fornecedor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5960,6 +6652,16 @@ SELECT cd_fornecedor, nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg_estad
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ds_telefone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_telefone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ds_email", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_email", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ds_email", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ds_email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cd_cnpj", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cnpj", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cd_cnpj", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cnpj", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cd_cpf", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cpf", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cd_cpf", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_cpf", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cd_ie", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_ie", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cd_ie", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_ie", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cd_rg", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_rg", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cd_rg", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cd_rg", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_sg_tipo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sg_tipo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sg_tipo", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sg_tipo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cd_fornecedor", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "cd_fornecedor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -5977,13 +6679,14 @@ SELECT cd_fornecedor, nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg_estad
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT cd_fornecedor, nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg_estado" +
-                ", cd_cep, ds_telefone, ds_email FROM dbo.tbFornecedor";
+                ", cd_cep, ds_telefone, ds_email, cd_cnpj, cd_cpf, cd_ie, cd_rg, sg_tipo FROM tbF" +
+                "ornecedor";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        cd_fornecedor, nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg" +
-                "_estado, cd_cep, ds_telefone, ds_email\r\nFROM            tbFornecedor\r\nWHERE     " +
-                "   (nm_fornecedor LIKE @nome)";
+            this._commandCollection[1].CommandText = "SELECT cd_fornecedor, nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg_estado" +
+                ", cd_cep, ds_telefone, ds_email, cd_cnpj, cd_cpf, cd_ie, cd_rg, sg_tipo FROM tbF" +
+                "ornecedor WHERE (nm_fornecedor LIKE @nome)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nome", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "nm_fornecedor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -6081,7 +6784,7 @@ SELECT cd_fornecedor, nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg_estad
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_cd_fornecedor, string Original_nm_fornecedor, string Original_ds_endereco, string Original_nm_cidade, string Original_nm_bairro, string Original_sg_estado, string Original_cd_cep, string Original_ds_telefone, string Original_ds_email) {
+        public virtual int Delete(int Original_cd_fornecedor, string Original_nm_fornecedor, string Original_ds_endereco, string Original_nm_cidade, string Original_nm_bairro, string Original_sg_estado, string Original_cd_cep, string Original_ds_telefone, string Original_ds_email, string Original_cd_cnpj, string Original_cd_cpf, string Original_cd_ie, string Original_cd_rg, string Original_sg_tipo) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_cd_fornecedor));
             if ((Original_nm_fornecedor == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -6147,6 +6850,46 @@ SELECT cd_fornecedor, nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg_estad
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_ds_email));
             }
+            if ((Original_cd_cnpj == null)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_cd_cnpj));
+            }
+            if ((Original_cd_cpf == null)) {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_cd_cpf));
+            }
+            if ((Original_cd_ie == null)) {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_cd_ie));
+            }
+            if ((Original_cd_rg == null)) {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((string)(Original_cd_rg));
+            }
+            if ((Original_sg_tipo == null)) {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((string)(Original_sg_tipo));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6167,7 +6910,7 @@ SELECT cd_fornecedor, nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg_estad
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string nm_fornecedor, string ds_endereco, string nm_cidade, string nm_bairro, string sg_estado, string cd_cep, string ds_telefone, string ds_email) {
+        public virtual int Insert(string nm_fornecedor, string ds_endereco, string nm_cidade, string nm_bairro, string sg_estado, string cd_cep, string ds_telefone, string ds_email, string cd_cnpj, string cd_cpf, string cd_ie, string cd_rg, string sg_tipo) {
             if ((nm_fornecedor == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -6216,6 +6959,36 @@ SELECT cd_fornecedor, nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg_estad
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = ((string)(ds_email));
             }
+            if ((cd_cnpj == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(cd_cnpj));
+            }
+            if ((cd_cpf == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(cd_cpf));
+            }
+            if ((cd_ie == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(cd_ie));
+            }
+            if ((cd_rg == null)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(cd_rg));
+            }
+            if ((sg_tipo == null)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(sg_tipo));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6245,6 +7018,11 @@ SELECT cd_fornecedor, nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg_estad
                     string cd_cep, 
                     string ds_telefone, 
                     string ds_email, 
+                    string cd_cnpj, 
+                    string cd_cpf, 
+                    string cd_ie, 
+                    string cd_rg, 
+                    string sg_tipo, 
                     int Original_cd_fornecedor, 
                     string Original_nm_fornecedor, 
                     string Original_ds_endereco, 
@@ -6254,6 +7032,11 @@ SELECT cd_fornecedor, nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg_estad
                     string Original_cd_cep, 
                     string Original_ds_telefone, 
                     string Original_ds_email, 
+                    string Original_cd_cnpj, 
+                    string Original_cd_cpf, 
+                    string Original_cd_ie, 
+                    string Original_cd_rg, 
+                    string Original_sg_tipo, 
                     int cd_fornecedor) {
             if ((nm_fornecedor == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -6303,72 +7086,142 @@ SELECT cd_fornecedor, nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg_estad
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(ds_email));
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_cd_fornecedor));
-            if ((Original_nm_fornecedor == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+            if ((cd_cnpj == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(cd_cnpj));
+            }
+            if ((cd_cpf == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(cd_cpf));
+            }
+            if ((cd_ie == null)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_nm_fornecedor));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(cd_ie));
             }
-            if ((Original_ds_endereco == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+            if ((cd_rg == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(cd_rg));
+            }
+            if ((sg_tipo == null)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_ds_endereco));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(sg_tipo));
+            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_cd_fornecedor));
+            if ((Original_nm_fornecedor == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_nm_fornecedor));
+            }
+            if ((Original_ds_endereco == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_ds_endereco));
             }
             if ((Original_nm_cidade == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_nm_cidade));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_nm_cidade));
             }
             if ((Original_nm_bairro == null)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_nm_bairro));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_nm_bairro));
             }
             if ((Original_sg_estado == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_sg_estado));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_sg_estado));
             }
             if ((Original_cd_cep == null)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_cd_cep));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_cd_cep));
             }
             if ((Original_ds_telefone == null)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_ds_telefone));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_ds_telefone));
             }
             if ((Original_ds_email == null)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_ds_email));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_ds_email));
             }
-            this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(cd_fornecedor));
+            if ((Original_cd_cnpj == null)) {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_cd_cnpj));
+            }
+            if ((Original_cd_cpf == null)) {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_cd_cpf));
+            }
+            if ((Original_cd_ie == null)) {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_cd_ie));
+            }
+            if ((Original_cd_rg == null)) {
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_cd_rg));
+            }
+            if ((Original_sg_tipo == null)) {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_sg_tipo));
+            }
+            this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(cd_fornecedor));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6398,6 +7251,11 @@ SELECT cd_fornecedor, nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg_estad
                     string cd_cep, 
                     string ds_telefone, 
                     string ds_email, 
+                    string cd_cnpj, 
+                    string cd_cpf, 
+                    string cd_ie, 
+                    string cd_rg, 
+                    string sg_tipo, 
                     int Original_cd_fornecedor, 
                     string Original_nm_fornecedor, 
                     string Original_ds_endereco, 
@@ -6406,8 +7264,13 @@ SELECT cd_fornecedor, nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg_estad
                     string Original_sg_estado, 
                     string Original_cd_cep, 
                     string Original_ds_telefone, 
-                    string Original_ds_email) {
-            return this.Update(nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_cep, ds_telefone, ds_email, Original_cd_fornecedor, Original_nm_fornecedor, Original_ds_endereco, Original_nm_cidade, Original_nm_bairro, Original_sg_estado, Original_cd_cep, Original_ds_telefone, Original_ds_email, Original_cd_fornecedor);
+                    string Original_ds_email, 
+                    string Original_cd_cnpj, 
+                    string Original_cd_cpf, 
+                    string Original_cd_ie, 
+                    string Original_cd_rg, 
+                    string Original_sg_tipo) {
+            return this.Update(nm_fornecedor, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_cep, ds_telefone, ds_email, cd_cnpj, cd_cpf, cd_ie, cd_rg, sg_tipo, Original_cd_fornecedor, Original_nm_fornecedor, Original_ds_endereco, Original_nm_cidade, Original_nm_bairro, Original_sg_estado, Original_cd_cep, Original_ds_telefone, Original_ds_email, Original_cd_cnpj, Original_cd_cpf, Original_cd_ie, Original_cd_rg, Original_sg_tipo, Original_cd_fornecedor);
         }
     }
     

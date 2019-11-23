@@ -44,6 +44,11 @@ namespace ProjetoContas
             cd_cepTextBox.Enabled = true;
             ds_telefoneTextBox.Enabled = true;
             ds_emailTextBox.Enabled = true;
+            sg_tipoTextBox.Enabled = true;
+            cd_cpfTextBox.Enabled = true;
+            cd_cnpjTextBox.Enabled = true;
+            cd_rgTextBox.Enabled = true;
+            cd_ieTextBox.Enabled = true;
             btnSalvar.Enabled = true;
             btnCancelar.Enabled = true;
             btnAnterior.Enabled = false;
@@ -67,6 +72,11 @@ namespace ProjetoContas
             cd_cepTextBox.Enabled = false;
             ds_telefoneTextBox.Enabled = false;
             ds_emailTextBox.Enabled = false;
+            sg_tipoTextBox.Enabled = false;
+            cd_cpfTextBox.Enabled = false;
+            cd_cnpjTextBox.Enabled = false;
+            cd_rgTextBox.Enabled = false;
+            cd_ieTextBox.Enabled = false;
             btnSalvar.Enabled = false;
             btnCancelar.Enabled = false;
             btnAnterior.Enabled = true;
@@ -169,7 +179,11 @@ namespace ProjetoContas
             strDados += "Estado: " + sg_estadoTextBox.Text + (char)10;
             strDados += "CEP: " + cd_cepTextBox.Text + (char)10;
             strDados += "Nível: " + ds_telefoneTextBox.Text + (char)10;
-            strDados += "Email: " + ds_emailTextBox.Text;
+            strDados += "Email: " + ds_emailTextBox.Text + (char)10;
+            strDados += "Tipo: " + sg_tipoTextBox.Text + (char)10;
+            strDados += "CPF: " + cd_cpfTextBox.Text + (char)10;
+            strDados += "CNPJ: " + cd_rgTextBox.Text + (char)10;
+            strDados += "IE: " + cd_ieTextBox.Text;
             objImpressao.DrawString(strDados, new System.Drawing.Font("Corbel", 12, FontStyle.Bold), Brushes.Black, 50, 50);
         }
 
