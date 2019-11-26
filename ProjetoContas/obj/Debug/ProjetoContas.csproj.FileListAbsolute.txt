@@ -114,3 +114,6 @@ C:\Users\aluno3\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\
 C:\Users\aluno3\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.pdb
 C:\Users\aluno3\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.csprojAssemblyReference.cache
 C:\Users\aluno2\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmSplashScreen.resources
+C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.csprojAssemblyReference.cache
+C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmRemessa.resources
+C:\Users\aluno1\Downloads\2019-2DSI3-Desenvolvimento-de-Sistemas-Projeto-Contas\ProjetoContas\obj\Debug\ProjetoContas.frmSplashScreen.resources

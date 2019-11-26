@@ -38,12 +38,12 @@
             System.Windows.Forms.Label cd_cepLabel;
             System.Windows.Forms.Label ds_telefoneLabel;
             System.Windows.Forms.Label ds_emailLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
             System.Windows.Forms.Label sg_tipoLabel;
             System.Windows.Forms.Label cd_cnpjLabel;
             System.Windows.Forms.Label cd_rgLabel;
             System.Windows.Forms.Label cd_ieLabel;
             System.Windows.Forms.Label cd_cpfLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
             this.cd_clienteTextBox = new System.Windows.Forms.TextBox();
             this.tbClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contasDataSet = new ProjetoContas.contasDataSet();
@@ -73,7 +73,7 @@
             this.cd_cnpjTextBox = new System.Windows.Forms.TextBox();
             this.cd_rgTextBox = new System.Windows.Forms.TextBox();
             this.cd_ieTextBox = new System.Windows.Forms.TextBox();
-            this.cd_cpfMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.cd_cpfTextBox = new System.Windows.Forms.MaskedTextBox();
             cd_clienteLabel = new System.Windows.Forms.Label();
             nm_clienteLabel = new System.Windows.Forms.Label();
             ds_enderecoLabel = new System.Windows.Forms.Label();
@@ -181,6 +181,56 @@
             ds_emailLabel.Size = new System.Drawing.Size(84, 29);
             ds_emailLabel.TabIndex = 17;
             ds_emailLabel.Text = "E-mail:";
+            // 
+            // sg_tipoLabel
+            // 
+            sg_tipoLabel.AutoSize = true;
+            sg_tipoLabel.Font = new System.Drawing.Font("Corbel", 18F);
+            sg_tipoLabel.Location = new System.Drawing.Point(76, 340);
+            sg_tipoLabel.Name = "sg_tipoLabel";
+            sg_tipoLabel.Size = new System.Drawing.Size(64, 29);
+            sg_tipoLabel.TabIndex = 28;
+            sg_tipoLabel.Text = "Tipo:";
+            // 
+            // cd_cnpjLabel
+            // 
+            cd_cnpjLabel.AutoSize = true;
+            cd_cnpjLabel.Font = new System.Drawing.Font("Corbel", 18F);
+            cd_cnpjLabel.Location = new System.Drawing.Point(71, 386);
+            cd_cnpjLabel.Name = "cd_cnpjLabel";
+            cd_cnpjLabel.Size = new System.Drawing.Size(71, 29);
+            cd_cnpjLabel.TabIndex = 32;
+            cd_cnpjLabel.Text = "CNPJ:";
+            // 
+            // cd_rgLabel
+            // 
+            cd_rgLabel.AutoSize = true;
+            cd_rgLabel.Font = new System.Drawing.Font("Corbel", 18F);
+            cd_rgLabel.Location = new System.Drawing.Point(343, 386);
+            cd_rgLabel.Name = "cd_rgLabel";
+            cd_rgLabel.Size = new System.Drawing.Size(49, 29);
+            cd_rgLabel.TabIndex = 34;
+            cd_rgLabel.Text = "RG:";
+            // 
+            // cd_ieLabel
+            // 
+            cd_ieLabel.AutoSize = true;
+            cd_ieLabel.Font = new System.Drawing.Font("Corbel", 18F);
+            cd_ieLabel.Location = new System.Drawing.Point(104, 426);
+            cd_ieLabel.Name = "cd_ieLabel";
+            cd_ieLabel.Size = new System.Drawing.Size(38, 29);
+            cd_ieLabel.TabIndex = 36;
+            cd_ieLabel.Text = "IE:";
+            // 
+            // cd_cpfLabel
+            // 
+            cd_cpfLabel.AutoSize = true;
+            cd_cpfLabel.Font = new System.Drawing.Font("Corbel", 18F);
+            cd_cpfLabel.Location = new System.Drawing.Point(217, 340);
+            cd_cpfLabel.Name = "cd_cpfLabel";
+            cd_cpfLabel.Size = new System.Drawing.Size(59, 29);
+            cd_cpfLabel.TabIndex = 37;
+            cd_cpfLabel.Text = "CPF:";
             // 
             // cd_clienteTextBox
             // 
@@ -412,16 +462,6 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // sg_tipoLabel
-            // 
-            sg_tipoLabel.AutoSize = true;
-            sg_tipoLabel.Font = new System.Drawing.Font("Corbel", 18F);
-            sg_tipoLabel.Location = new System.Drawing.Point(76, 340);
-            sg_tipoLabel.Name = "sg_tipoLabel";
-            sg_tipoLabel.Size = new System.Drawing.Size(64, 29);
-            sg_tipoLabel.TabIndex = 28;
-            sg_tipoLabel.Text = "Tipo:";
-            // 
             // sg_tipoTextBox
             // 
             this.sg_tipoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "sg_tipo", true));
@@ -430,16 +470,6 @@
             this.sg_tipoTextBox.Name = "sg_tipoTextBox";
             this.sg_tipoTextBox.Size = new System.Drawing.Size(65, 37);
             this.sg_tipoTextBox.TabIndex = 29;
-            // 
-            // cd_cnpjLabel
-            // 
-            cd_cnpjLabel.AutoSize = true;
-            cd_cnpjLabel.Font = new System.Drawing.Font("Corbel", 18F);
-            cd_cnpjLabel.Location = new System.Drawing.Point(71, 386);
-            cd_cnpjLabel.Name = "cd_cnpjLabel";
-            cd_cnpjLabel.Size = new System.Drawing.Size(71, 29);
-            cd_cnpjLabel.TabIndex = 32;
-            cd_cnpjLabel.Text = "CNPJ:";
             // 
             // cd_cnpjTextBox
             // 
@@ -450,16 +480,6 @@
             this.cd_cnpjTextBox.Size = new System.Drawing.Size(189, 37);
             this.cd_cnpjTextBox.TabIndex = 33;
             // 
-            // cd_rgLabel
-            // 
-            cd_rgLabel.AutoSize = true;
-            cd_rgLabel.Font = new System.Drawing.Font("Corbel", 18F);
-            cd_rgLabel.Location = new System.Drawing.Point(343, 386);
-            cd_rgLabel.Name = "cd_rgLabel";
-            cd_rgLabel.Size = new System.Drawing.Size(49, 29);
-            cd_rgLabel.TabIndex = 34;
-            cd_rgLabel.Text = "RG:";
-            // 
             // cd_rgTextBox
             // 
             this.cd_rgTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_rg", true));
@@ -468,16 +488,6 @@
             this.cd_rgTextBox.Name = "cd_rgTextBox";
             this.cd_rgTextBox.Size = new System.Drawing.Size(182, 37);
             this.cd_rgTextBox.TabIndex = 35;
-            // 
-            // cd_ieLabel
-            // 
-            cd_ieLabel.AutoSize = true;
-            cd_ieLabel.Font = new System.Drawing.Font("Corbel", 18F);
-            cd_ieLabel.Location = new System.Drawing.Point(104, 426);
-            cd_ieLabel.Name = "cd_ieLabel";
-            cd_ieLabel.Size = new System.Drawing.Size(38, 29);
-            cd_ieLabel.TabIndex = 36;
-            cd_ieLabel.Text = "IE:";
             // 
             // cd_ieTextBox
             // 
@@ -488,25 +498,15 @@
             this.cd_ieTextBox.Size = new System.Drawing.Size(182, 37);
             this.cd_ieTextBox.TabIndex = 37;
             // 
-            // cd_cpfLabel
+            // cd_cpfTextBox
             // 
-            cd_cpfLabel.AutoSize = true;
-            cd_cpfLabel.Font = new System.Drawing.Font("Corbel", 18F);
-            cd_cpfLabel.Location = new System.Drawing.Point(217, 340);
-            cd_cpfLabel.Name = "cd_cpfLabel";
-            cd_cpfLabel.Size = new System.Drawing.Size(59, 29);
-            cd_cpfLabel.TabIndex = 37;
-            cd_cpfLabel.Text = "CPF:";
-            // 
-            // cd_cpfMaskedTextBox
-            // 
-            this.cd_cpfMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_cpf", true));
-            this.cd_cpfMaskedTextBox.Font = new System.Drawing.Font("Corbel", 18F);
-            this.cd_cpfMaskedTextBox.Location = new System.Drawing.Point(282, 340);
-            this.cd_cpfMaskedTextBox.Mask = "999.999.999-99";
-            this.cd_cpfMaskedTextBox.Name = "cd_cpfMaskedTextBox";
-            this.cd_cpfMaskedTextBox.Size = new System.Drawing.Size(162, 37);
-            this.cd_cpfMaskedTextBox.TabIndex = 38;
+            this.cd_cpfTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_cpf", true));
+            this.cd_cpfTextBox.Font = new System.Drawing.Font("Corbel", 18F);
+            this.cd_cpfTextBox.Location = new System.Drawing.Point(282, 340);
+            this.cd_cpfTextBox.Mask = "999.999.999-99";
+            this.cd_cpfTextBox.Name = "cd_cpfTextBox";
+            this.cd_cpfTextBox.Size = new System.Drawing.Size(162, 37);
+            this.cd_cpfTextBox.TabIndex = 38;
             // 
             // frmCliente
             // 
@@ -515,7 +515,7 @@
             this.ClientSize = new System.Drawing.Size(631, 628);
             this.ControlBox = false;
             this.Controls.Add(cd_cpfLabel);
-            this.Controls.Add(this.cd_cpfMaskedTextBox);
+            this.Controls.Add(this.cd_cpfTextBox);
             this.Controls.Add(cd_ieLabel);
             this.Controls.Add(this.cd_ieTextBox);
             this.Controls.Add(cd_rgLabel);
@@ -595,6 +595,6 @@
         private System.Windows.Forms.TextBox cd_cnpjTextBox;
         private System.Windows.Forms.TextBox cd_rgTextBox;
         private System.Windows.Forms.TextBox cd_ieTextBox;
-        private System.Windows.Forms.MaskedTextBox cd_cpfMaskedTextBox;
+        private System.Windows.Forms.MaskedTextBox cd_cpfTextBox;
     }
 }
