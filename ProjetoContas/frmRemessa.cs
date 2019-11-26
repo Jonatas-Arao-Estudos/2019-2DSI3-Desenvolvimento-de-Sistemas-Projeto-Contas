@@ -45,7 +45,11 @@ namespace ProjetoContas
                 + linha.ToString("000000"));
             while (tbContasReceberBindingSource.Position < tbContasReceberBindingSource.Count)
             {
-                arq.WriteLine("100000 00000000000000190161000012345");
+                int nossonumero;
+                arq.WriteLine("100000 00000000000000190161000012345"
+                    + contasDataSet.tbContasReceber.Rows[tbContasReceberBindingSource.Position][contasDataSet.tbContasReceber.cd_contaColumn].ToString().PadRight(25)
+                    + "23720200" + nossonumero
+                    );
             }
         }
     }
