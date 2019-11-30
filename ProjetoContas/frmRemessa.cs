@@ -42,15 +42,56 @@ namespace ProjetoContas
                 + "        MX" 
                 + remessa.ToString("0000000") 
                 + "                                                                                                                                                                                                                                                                                     " 
-                + linha.ToString("000000"));
-            while (tbContasReceberBindingSource.Position < tbContasReceberBindingSource.Count)
+                + linha.ToString("000000")
+           );
+            int rr = 0;
+            DataRowView drc, drcr;
+            while (rr < tbContasReceberBindingSource.Count)
             {
-                string nossonumero = contasDataSet.tbContasReceber.Rows[tbContasReceberBindingSource.Position][contasDataSet.tbContasReceber.cd_contaColumn].ToString().PadRight(11,'0');
+                drcr = (DataRowView)tbContasReceberBindingSource.Current;
+                int codeli = int.Parse(drcr["id_cliente"].ToString());
+                int reg = tbClienteBindingSource.Find("cd_cliente", codeli);
+                tbClienteBindingSource.Position = reg;
+                drc = (DataRowView)tbClienteBindingSource.Current;
                 arq.WriteLine("100000 00000000000000190161000012345"
-                    + contasDataSet.tbContasReceber.Rows[tbContasReceberBindingSource.Position][contasDataSet.tbContasReceber.cd_contaColumn].ToString().PadRight(25)
-                    + "23720200" + nossonumero
-                    );
+                    + drcr["cd_contareceber"].ToString().PadRight(25)
+                    + "23720200"
+                    + NossoNumero(drcr["cd_contareceber"].ToString().PadLeft(11, '0'))
+                    + "00000000002N           2  01"
+                    + drcr["cd_contareceber"].ToString().PadRight(10)
+                    + drcr["dt_vencimento"].ToString().Substring(0, 2)
+                    + drcr["dt_vencimento"].ToString().Substring(3, 2)
+                    + drcr["dt_vencimento"].ToString().Substring(8, 2)
+                    + (double.Parse(drcr["vl_conta"].ToString()) * 100).ToString().PadLeft(13, '0')
+                    + "000000001N"
+                    + drcr["dt_emissao"].ToString().Substring(0, 2)
+                    + drcr["dt_emissao"].ToString().Substring(3, 2)
+                    + drcr["dt_emissao"].ToString().Substring(8, 2)
+                    + "    0000000000000000000000000000000000000000000000000000000000"
+                    + (drc["sg_tipo"].ToString() == "F" ? "01" + drc["cd_cpf"].ToString().PadLeft(14, '0') : "01" + drc["cd_cnpj"].ToString().PadLeft(14, '0'))
+                    + drc["nm_cliente"].ToString().PadRight(40)
+                    + drc["ds_endereco"].ToString().PadRight(40)
+                    + "            "
+                    + drc["cd_cep"].ToString().PadLeft(8, '0')
+                    + "                                                            "
+                    + linha.ToString().PadLeft(6, '0')
+                );
+                rr++;
+                if (rr < tbContasReceberBindingSource.Count)
+                {
+                    tbContasReceberBindingSource.MoveNext();
+                }
             }
+            linha++;
+            arq.WriteLine("9                                                                                                                                                                                                                                                                                                                                                                                                         " + linha.ToString().PadLeft(6, '0'));
+            arq.Close();
         }
+
+        private string NossoNumero(string nn)
+        {
+            nn = "19" + nn;
+            return nn;
+        }
+
     }
 }
