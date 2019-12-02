@@ -31,5 +31,22 @@ namespace ProjetoContas
             this.tbContasReceberTableAdapter.Fill(this.contasDataSet.tbContasReceber);
 
         }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            StreamReader arq = new StreamReader(txtArquivo.Text);
+            string linha;
+            while (!arq.EndOfStream)
+            {
+                linha = arq.ReadLine();
+                if(linha.Substring(0,1) == "1" && linha.Substring(108,2) == "06")
+                {
+                    string dtpag = linha.Substring(110, 2) + "/" + linha.Substring(112, 2) + "/" + linha.Substring(114, 2);
+                    Decimal vlpag = Decimal.Parse(linha.Substring(253, 13)) / 100;
+                    int coddoc = int.Parse(linha.Substring(116, 10));
+                    tbContasReceberTableAdapter.BaixaPagamento(dtpag, vlpag, coddoc);
+                }
+            }
+        }
     }
 }
