@@ -141,6 +141,12 @@
     <Compile Include="frmRemessa.Designer.cs">
       <DependentUpon>frmRemessa.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRetorno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRetorno.Designer.cs">
+      <DependentUpon>frmRetorno.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRemessa.resx">
       <DependentUpon>frmRemessa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRetorno.resx">
+      <DependentUpon>frmRetorno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
