@@ -46,6 +46,7 @@ namespace ProjetoContas
                     int coddoc = int.Parse(linha.Substring(116, 10));
                     tbContasReceberTableAdapter.BaixaPagamento(dtpag, vlpag, coddoc);
                 }
+                arq.Close();
             }
         }
     }
