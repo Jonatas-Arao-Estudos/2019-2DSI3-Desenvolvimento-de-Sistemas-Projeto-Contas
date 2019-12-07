@@ -57,5 +57,11 @@ namespace ProjetoContas
             frmRemessa frr = new frmRemessa();
             frr.Show();
         }
+
+        private void retornoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRetorno frr = new frmRetorno();
+            frr.Show();
+        }
     }
 }

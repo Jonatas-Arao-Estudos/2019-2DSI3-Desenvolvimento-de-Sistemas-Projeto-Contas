@@ -131,6 +131,7 @@
             this.retornoToolStripMenuItem.Name = "retornoToolStripMenuItem";
             this.retornoToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
             this.retornoToolStripMenuItem.Text = "Retorno";
+            this.retornoToolStripMenuItem.Click += new System.EventHandler(this.retornoToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
