@@ -63,5 +63,35 @@ namespace ProjetoContas
             frmRetorno frr = new frmRetorno();
             frr.Show();
         }
+
+        private void usuariosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmRelatorioUsuario fru = new frmRelatorioUsuario();
+            fru.Show();
+        }
+
+        private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmRelatorioCliente frc = new frmRelatorioCliente();
+            frc.Show();
+        }
+
+        private void fornecedoresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmRelatorioFornecedor frf = new frmRelatorioFornecedor();
+            frf.Show();
+        }
+
+        private void contasAReceberToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmRelatorioContasReceber frcr = new frmRelatorioContasReceber();
+            frcr.Show();
+        }
+
+        private void contasAPagarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmRelatorioContasPagar frcp = new frmRelatorioContasPagar();
+            frcp.Show();
+        }
     }
 }
